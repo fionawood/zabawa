@@ -62,7 +62,7 @@ breaklinks=true,
   \alignauthor Anna Kiyantseva and Fiona Wood\\
     \affaddr{Harvard School of Engineering and Applied Sciences}\\
     \affaddr{33 Oxford St., Cambridge, MA 02138, USA}\\
-    \email{\{annakiyantseva, fwood\}@college.harvard.edu}
+    \email{\{annakiyantseva, fwood\}@college.harvard.edu}\\
     }
 
 % Teaser figure can go here
@@ -83,40 +83,16 @@ breaklinks=true,
 	Gamification
 }
 
-\category{H.5.m.}{Information Interfaces and Presentation (e.g. HCI)}{Miscellaneous
-\\
-\textcolor{red}{See: \url{http://www.acm.org/about/class/1998/}
-for more information and the full list of ACM classifiers and descriptors. 
-Mandatory section: On the submission page
-only the classifiers' letter-number combination will need to be entered.}
-}
+\category{1.2.2}{Interaction design}{Interaction design theory, concepts, and paradigms}
 
 \terms{
-	Human Factors; Design; Measurement. 
+	Human Factors; Design; Measurement; Gamification. 
 }
 
-\section{Introduction}
+\input{introduction}
 
-Scholarly work in HCI on the topic of incentive schemes and gamification of tasks has largely focused on the comparison of one (usually quite dull) task without added incentives and the same task with added incentives. Although this knowledge is valuable in establishing whether specific types of incentives are effective at motivating engagement in specific task types, this work tends to be difficult to generalize. Furthermore, comparison of one incentive scheme relative to another unless both have incidentally been covered within the same paper -- in the majority of cases, incentive schemes of interest have been investigated in entirely separate contexts and on dissimilar task types, making true evaluations of their efficacy against each other impossible.
-
-Experimenters attempting to build effective HCI platforms for the crowd run into the common problem of choosing the right incentive structures for their particular area of interest, but are thrust into a body of incentives and gamification literature that leads to contradictory conclusions. It is clear that not all incentive schemes generalize perfectly to all tasks, and certainly not to all audiences, but data that takes both of these factors into account is relatively sparse within the field.
-
-It would thus be incredibly useful to construct a preliminary, standardized model of how engagement in a certain task varies on the basis of the task's “inherent” interest value to the individual and the potency of the incentive or gamification scheme used (the terms engagement, inherent interest, and potency are all defined and operationalized below, in the Methods section). 
-
-\subsection{Engagement as a continuous variable}
-
-Our basic assumption is that the holistic measurement of “engagement” is continuous, waxing and waning on the basis of several factors, such as the individual’s personal interest, the task’s inherent/universal interest value, and the incentive scheme applied to facilitate concurrent task completion. Varying any one of these factors may result in a change in engagement, but not necessarily in a linear fashion. For example, engagement in a task that holds high individual and inherent interest may actually be lessened via the application of high-potency incentive scheme, particularly if the user interprets the incentives as a signal that the task “should be” boring or believes the additional gamification to be cheapening the task’s inherent value. 
-To investigate each of these variables as precisely as possible, our approach is to create a series of tasks with varying levels of inherent interest value and a similar series of incentive schemes of varying potency that can be applied to the aforementioned tasks. Users will be given a pseudorandomized assortment of tasks with different incentive schemes applied to each one (though the system will restrict the same task from appearing multiple times, to prevent direct comparisons on the part of the user). 
-
-Before the presentation of each task type, the user will be asked to estimate, on a standard Likert scale, his personal interest in the subject matter about to be presented (i.e. “how interested are you in the classification of bat skulls?”). The presentation of this material before actual task completion ensures that the user does not base his answer on his actual experience of boredom or enjoyment, which will likely vary depending on the applied incentive structure. \cite{Easley:2013:IGG:2492002.2482571} 
-
-After the completion of each task within a series, the user will once again be presented with a Likert scale asking him to rank his enjoyment of and engagement with the task, as well as a multiple-choice questionnaire on the potential reasons for his answer.
-
-\subsection{Conceptual contributions}
-
-We hope to develop a generalizable model of any task's engagement space, as affected by the intrinsic incentives of the task (interest of the task to the user) and the different types of external incentives that can be incorporated into the way in which the task is presented. Just as comprehensive user studies can provide us with models of motor control of devices or of color perception, carefully designed experiments can help us develop models of responses to incentives that can be used to predict levels of user engagement in other settings. Further testing of the model on other tasks would allow us to determine whether or not elements of such incentive schemes are universal. Such a model would take some of the guesswork out of game design and make developing engaging tasks a more straightforward process that is task-aware and effective.
-
-\section{Related Work}
+\input{relatedwork}
+ 
 
 % Balancing columns in a ref list is a bit of a pain because you
 % either use a hack like flushend or balance, or manually insert
@@ -137,7 +113,7 @@ We hope to develop a generalizable model of any task's engagement space, as affe
 %
 % Or, just remove \balance and give up on balancing the last page.
 %
-%\balance
+\balance
 
 % If you want to use smaller typesetting for the reference list,
 % uncomment the following line:
