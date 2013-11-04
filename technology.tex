@@ -5,16 +5,24 @@
 
 \subsection{Incentive implementation}
 \subsubsection{Money} - anna
-\subsubsection{Charity money} - anna
+Because our system will not necessarily run on the Mechanical Turk platform, monetary incentives will take the form of Amazon giftcard money. When a task is first presented to the user, an alert displayed via client-side JavaScript will inform them that successful completion of the task will enable them to receive "\$X" amount of giftcard money via a redemption code. This alert will then recede into an unobtrusive position on the screen. The user will be provided with their redemption code after clicking "next" and before the display of the task survey.
+
+In an alternative condition, users will be told that this money will be donated to the charity "Doctors Without Borders" in the event of successful task completion.
 \subsubsection{Badges} - FW
 \subsubsection{Leveling up} - FW
 \subsubsection{Social comparison} - anna
-
+The final incentive consists of a social comparison or "leaderboard" system that informs the user of his or her rank within the task relative to peers. During a fixed temporal point within each task, an unobtrusive alert displayed via client-size JavaScript will begin to inform the user that "X" others have reached the same level of success, that "Y" have done worse, and that "Z" have done better ("X", "Y", and "Z" all being artificially generated numbers whose ratios to each other will be hard-coded but whose actual amounts will vary). Subsequent fixed temporal points will cause these amounts to change appropriately (but, once again, regardless of actual numerical truth). When the user clicks next to proceed to the next task or finish the session, the final status of this "leaderboard" will briefly be displayed to the user before the task survey.
 \subsection{Task implementation}
 \subsubsection{DDR/guitar hero variant} - FW
 \subsubsection{Text-based game} - anna
+The second task that we expect to have relatively "high" values of inherent interest is a text-based adventure game in the vein of classical command-line based interactive fiction. Users will be eased into the game via initial "suggested moves" written into the console to ensure their general comfort with this style of gameplay. The game itself is a standard hero quest involving exploration, discovery, and battles that will be implemented entirely from scratch in JavaScript to ensure proper integration with our incentive structure.
+
+The deepest tree in the interactive fiction is expected to contain 35 steps total, with an estimated completion time of 15 minutes. The shortest tree in the game is expected to contain 10 steps total, with an estimated completion time of less than one minute. Users will be able to restart after in-game "death" and the option to reset the game to its original state will persist throughout gameplay. 
 \subsubsection{Clicking on targets} - FW
 \subsubsection{Typing speed/accuracy} - anna
-
+The task that we expect to generate "moderate" amounts of inherent interest is a JavaScript-based typing speed test of the type common in both introductory computer skills classes and online applets. Users will be presented with several paragraphs worth of text taken from public domain sources and asked to type their content out to the best of their ability.
 \subsection{Database entries}
+Our data will be stored on two separate standard MySQL databases. The first database will correspond to data derived from the potency and interest evaluation portions of our experiment, in which users will evaluate single tasks and incentive schemes on the basis of their inherent interest and incentive potency values. The data from this stage will be structured as follows: a session hash corresponding to a single user's activity, a trial number denoting a trial within a user's session, the ID of the incentive given on each trial (with the task held constant), the potency value assigned by the user to each incentive within a trial, the preference order assigned by the user to each incentive within a trial, the ID of the task given on each trial (with the incentive held constant), the interest value assigned by the user to each task within a trial, the task difficulty assigned by the user to each task within a trial, and, finally, the preference order assigned by the user to each task within a trial.
+
+The second database will correspond to data derived from the actual engagement evaluation portion of our experiment. Users in this subsection will be assigned to two of the four tasks in pseudorandom order (to ensure that tasks are not duplicated) and to one of the incentive conditions. The data from this stage will differ from that in the previous phase in the following ways: an additional field will be associated with each trial indicating how much additional time a user spent on a task after the "next" button appeared and the potency value for each incentive type as well as the inherent interest value for each task type will be a fixed value derived from the first portion of experimentation. Furthermore, fields will be added to represent data derived from the user survey at the end of each session, including records of responses to the general demographics, task experience, and interest level questionnaire and responses for evaluations of the difficulty, self-efficacy, engagement, and replay value for each task type.
 \subsection{User evaluations}
