@@ -62,6 +62,9 @@ var process_input = function(cmd_text) {
             object_string = "stages." + current_stage.commands[i];
             current_stage = eval(object_string);
             command_found = true;
+            if (current_stage.badge !== undefined && incentive_mode == "badges") {
+                assign_badge(current_stage.badge);
+            }
             print_text(current_stage.action);
         }
     }
