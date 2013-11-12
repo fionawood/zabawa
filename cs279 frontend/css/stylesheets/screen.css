@@ -4,7 +4,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,45 +26,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../.rvm/gems/ruby-2.0.0-p247@cs279project/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -131,12 +131,6 @@ body .light {
 
 /* line 59, ../sass/_global.scss */
 .leader-modal {
-  width: 450px;
-  left: 50%;
-  margin-left: -225px;
-}
-
-.levels-modal {
   width: 450px;
   left: 50%;
   margin-left: -225px;
@@ -212,18 +206,24 @@ input[type=text]:focus, textarea:focus {
 
 /* _exposition.scss */
 /* line 3, ../sass/_exposition.scss */
+p {
+  line-height: 24pt;
+  margin-bottom: 20px;
+}
+
+/* line 8, ../sass/_exposition.scss */
 .centered {
   text-align: center;
 }
 
-/* line 7, ../sass/_exposition.scss */
+/* line 12, ../sass/_exposition.scss */
 .exposition {
   margin: 0px auto;
   margin-top: 2%;
   width: 70%;
 }
 
-/* line 13, ../sass/_exposition.scss */
+/* line 18, ../sass/_exposition.scss */
 ul {
   list-style-type: disc;
   margin-top: 25px;
@@ -233,39 +233,39 @@ ul {
   font-size: 18pt;
 }
 
-/* line 22, ../sass/_exposition.scss */
+/* line 27, ../sass/_exposition.scss */
 ul li {
   margin: 15px 40px 15px 40px;
 }
 
-/* line 26, ../sass/_exposition.scss */
+/* line 31, ../sass/_exposition.scss */
 .very-large-text {
   font-size: 48pt;
   font-weight: 700;
   line-height: 56pt;
 }
 
-/* line 32, ../sass/_exposition.scss */
+/* line 37, ../sass/_exposition.scss */
 .large-text {
   font-size: 28pt;
 }
 
-/* line 36, ../sass/_exposition.scss */
+/* line 41, ../sass/_exposition.scss */
 .small-text {
   font-size: 12pt;
 }
 
-/* line 40, ../sass/_exposition.scss */
+/* line 45, ../sass/_exposition.scss */
 .bright {
   color: #8de9f7;
 }
 
-/* line 44, ../sass/_exposition.scss */
+/* line 49, ../sass/_exposition.scss */
 .dark {
   color: #1c9ded;
 }
 
-/* line 48, ../sass/_exposition.scss */
+/* line 53, ../sass/_exposition.scss */
 input[type=email] {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
@@ -279,7 +279,7 @@ input[type=email] {
   font-size: 16pt;
 }
 
-/* line 61, ../sass/_exposition.scss */
+/* line 66, ../sass/_exposition.scss */
 input[type=email]:focus {
   box-shadow: 0 0 5px #1c9ded;
   padding: 3px 0px 3px 13px;
@@ -287,7 +287,7 @@ input[type=email]:focus {
   border: 1px solid #1c9ded;
 }
 
-/* line 68, ../sass/_exposition.scss */
+/* line 73, ../sass/_exposition.scss */
 input[type=submit] {
   background-color: #1c9ded;
   border-radius: 30px;
@@ -298,12 +298,12 @@ input[type=submit] {
   top: -2px;
 }
 
-/* line 78, ../sass/_exposition.scss */
+/* line 83, ../sass/_exposition.scss */
 input[type=submit]:hover {
   background-color: #5de0f4;
 }
 
-/* line 82, ../sass/_exposition.scss */
+/* line 87, ../sass/_exposition.scss */
 input[type=submit]:active {
   background-color: #2ed7f0;
 }
@@ -359,7 +359,8 @@ h3 {
   font-size: 32pt;
 }
 
+/* line 54, ../sass/_incentives.scss */
 #levels h1 {
-  text-align: center;
+  text-align: left;
   font-size: 32pt;
 }
