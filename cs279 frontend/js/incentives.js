@@ -41,3 +41,20 @@ setInterval(function() {
     prev_percent = percentage;
     }, 20000);
 };
+
+var level_details = {
+    1: {
+        name: "Wordsmith",
+        image: "<img src='http://placehold.it/70x70'>",
+    },
+};
+
+if(incentive_mode == "levels") {
+    var level=0;
+
+    var next_level = function() {
+        level++;
+        l = level_details[level];
+        $(".incentives #levels").html("<h1> You've advanced to <strong class ='dark'> Level " + l.name + " </strong>! </h1>");
+    }
+};

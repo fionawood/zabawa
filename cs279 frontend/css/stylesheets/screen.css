@@ -136,6 +136,12 @@ body .light {
   margin-left: -225px;
 }
 
+.levels-modal {
+  width: 450px;
+  left: 50%;
+  margin-left: -225px;
+}
+
 /* _survey.scss */
 /* line 3, ../sass/_console.scss */
 .console {
@@ -349,6 +355,11 @@ h3 {
 
 /* line 47, ../sass/_incentives.scss */
 #leaders h1 {
+  text-align: center;
+  font-size: 32pt;
+}
+
+#levels h1 {
   text-align: center;
   font-size: 32pt;
 }
