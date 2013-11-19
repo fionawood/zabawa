@@ -1,1 +1,1 @@
-$(".next").hide().delay(10000).fadeIn(1000);
+$(".next").hide().delay(15000).fadeIn(6500);
