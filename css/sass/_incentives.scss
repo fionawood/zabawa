@@ -1,0 +1,58 @@
+/* _incentives.scss */
+
+.incentives {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	height: 14%;
+	background-color: lighten($gray, 55%);
+	border-top: 1px solid $gray;
+	overflow: hidden;
+}
+
+
+#badges {
+	height: inherit;
+	img {
+		margin: 0px;
+		padding: 0px;
+		position: relative;
+		border-radius: 2px;
+	}
+
+	ul {
+		margin-top: 4px;
+		list-style-type: none;
+	}
+
+	li {
+		margin: 0px 2px 0px 2px;
+		text-align: center;
+		display: inline-block;	
+		background-color: lighten($gray, 40%);
+		border-radius: 5px;
+		padding: 10px 10px 3px 10px;
+
+	}
+}
+
+h3 {
+	margin: -10px 0px -10px 0px;
+	font-size: 8pt;
+	font-weight: 700;
+
+}
+
+#leaders {
+	h1 {
+		text-align: center;
+		font-size: 32pt;
+	}
+}
+
+#levels {
+	h1 {
+		text-align: left;
+		font-size: 32pt;
+	}
+}
