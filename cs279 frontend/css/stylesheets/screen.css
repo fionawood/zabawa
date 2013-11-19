@@ -136,6 +136,12 @@ body .light {
   margin-left: -225px;
 }
 
+/* line 65, ../sass/_global.scss */
+.next {
+  margin-top: 25px;
+  display: none;
+}
+
 /* _survey.scss */
 /* line 3, ../sass/_console.scss */
 .console {
@@ -152,28 +158,32 @@ body .light {
 .console p:before {
   content: ">>";
 }
+/* line 15, ../sass/_console.scss */
+.console p {
+  margin: 0px;
+}
 
-/* line 17, ../sass/_console.scss */
+/* line 20, ../sass/_console.scss */
 #console-container {
   color: white;
-  height: 550px;
+  height: 510px;
   background-color: black;
   border-radius: 25px;
   padding: 15px 15px 0px 15px;
 }
 
-/* line 25, ../sass/_console.scss */
+/* line 28, ../sass/_console.scss */
 #output {
-  height: 500px;
+  height: 470px;
   overflow: scroll;
 }
 
-/* line 30, ../sass/_console.scss */
+/* line 33, ../sass/_console.scss */
 .action {
   color: #8de9f7;
 }
 
-/* line 34, ../sass/_console.scss */
+/* line 37, ../sass/_console.scss */
 form {
   margin: 0px auto;
   border-radius: 40px;
@@ -182,7 +192,7 @@ form {
   background-color: #8de9f7;
 }
 
-/* line 42, ../sass/_console.scss */
+/* line 45, ../sass/_console.scss */
 input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
@@ -196,7 +206,7 @@ input[type=text], textarea {
   font-size: 12pt;
 }
 
-/* line 55, ../sass/_console.scss */
+/* line 58, ../sass/_console.scss */
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px #1c9ded;
   padding: 3px 0px 3px 13px;

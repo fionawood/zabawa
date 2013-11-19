@@ -12,18 +12,21 @@
 	p:before {
 		content: ">>";
 	}
+	p {
+		margin: 0px;
+	}
 }
 
 #console-container {
 	color: white;
-	height: 550px;
+	height: 510px;
 	background-color: black;
 	border-radius: 25px;
 	padding: 15px 15px 0px 15px;
 }
 
 #output {
-	height: 500px;
+	height: 470px;
 	overflow: scroll;
 }
 

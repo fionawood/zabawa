@@ -9,6 +9,31 @@ var adventure_badges = {
         description: "You've escaped the box.",
         image: "<img src='http://placehold.it/70x70'>",
     },
+    2: {
+        name: "Satiated",
+        description: "You've feasted.",
+        image: "<img src='http://placehold.it/70x70'>",
+    },
+    3: {
+        name: "Invader",
+        description: "You have become a parasite inside of the man's body.",
+        image: "<img src='http://placehold.it/70x70'>",
+    },
+    4: {
+        name: "Disintegrated",
+        description: "Your body has been dissolved into its constituent chemicals.",
+        image: "<img src='http://placehold.it/70x70'>",
+    },
+    5: {
+        name: "Replicant",
+        description: "You have made more of yourself.",
+        image: "<img src='http://placehold.it/70x70'>",
+    },    
+    6: {
+        name: "Infection",
+        description: "You and your offspring have taken over the man's body, and are now proceeding to infect other hosts at pandemic levels.",
+        image: "<img src='http://placehold.it/70x70'>",
+    },
 
 };
 
