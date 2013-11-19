@@ -22,25 +22,29 @@ var stages = {
         defaults: "The pinhole seems like the only hope of escaping this box." },
     escape: {
         action: "You crawl to the pinhole and just barely fit your body through. Now you can finally see the world if you lift your eyes.",
-        commands: ["world", "eyes", "lift"],
+        commands: ["world", "eyes", "lift", "outside"],
         defaults: "You've wanted to see the outside for so long..." ,
         badge: 1},
     pinhole: {
         action: "You crawl to the pinhole and just barely fit your body through. Now you can finally see the world if you lift your eyes.",
-        commands: ["world", "eyes", "lift"],
+        commands: ["world", "eyes", "lift", "outside"],
         defaults: "You've wanted to see the outside for so long..." ,
         badge: 1},
     lift: {
         action: "You see the sky for the first time. The world outside is so beautiful and big, but you are so small...and so hungry.",
-        commands: ["food", "explore", "search"],
+        commands: ["food", "explore", "search", "hungry"],
         defaults: "You try, but you're so ravenous...all you have strength for is searching for food." },
     world: {
         action: "You see the sky for the first time. The world outside is so beautiful and big, but you are so small...and so hungry.",
-        commands: ["food", "explore", "search"],
+        commands: ["food", "explore", "search", "hungry"],
         defaults: "You try, but you're so ravenous...all you have strength for is searching for food." },
     eyes: {
         action: "You see the sky for the first time. The world outside is so beautiful and big, but you are so small...and so hungry.",
-        commands: ["food", "explore", "search"],
+        commands: ["food", "explore", "search", "hungry"],
+        defaults: "You try, but you're so ravenous...all you have strength for is searching for food." },
+    outside: {
+        action: "You see the sky for the first time. The world outside is so beautiful and big, but you are so small...and so hungry.",
+        commands: ["food", "explore", "search", "hungry"],
         defaults: "You try, but you're so ravenous...all you have strength for is searching for food." },
     food: {
         action: "You glance around the box, searching for food. An ant crawls across its shiny surface.",
@@ -51,6 +55,10 @@ var stages = {
         commands: ["eat", "ant", "consume"],
         defaults: "Maybe the ant will provide sustenance?" },
     explore: {
+        action: "You glance around the box, searching for food. An ant crawls across its shiny surface.",
+        commands: ["eat", "ant", "consume"],
+        defaults: "Maybe the ant will provide sustenance?" },
+    hungry: {
         action: "You glance around the box, searching for food. An ant crawls across its shiny surface.",
         commands: ["eat", "ant", "consume"],
         defaults: "Maybe the ant will provide sustenance?" },

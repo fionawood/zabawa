@@ -39,7 +39,7 @@ var adventure_badges = {
 
 var assign_badge = function(badge_id) {
     badge = adventure_badges[badge_id];
-    $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + badge.name + "</h2> <br/>" + badge.image + "<br/> <p>" + badge.description + "</p>").hide().fadeIn(500).delay(400).fadeOut(1000);
+    $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + badge.name + "</h2> <br/>" + badge.image + "<br/> <p>" + badge.description + "</p>").hide().fadeIn(100).delay(1000).fadeOut(1000);
     $(".incentives #badges ul").append("<li>" + badge.image + "<h3 class = 'badge-name'>" + badge.name + "</h3> </li>");
 };
 
