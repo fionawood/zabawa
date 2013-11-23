@@ -106,7 +106,7 @@ body .light {
   height: auto;
   background-color: #bdf2fa;
   border-radius: 15px;
-  opacity: 0.4;
+  opacity: 0.8;
   z-index: 999;
   top: 25%;
   display: none;
@@ -131,9 +131,9 @@ body .light {
 
 /* line 59, ../sass/_global.scss */
 .leader-modal {
-  width: 450px;
+  width: 200px;
   left: 50%;
-  margin-left: -225px;
+  margin-left: -100px;
 }
 
 /* line 65, ../sass/_global.scss */
@@ -184,7 +184,7 @@ body .light {
 }
 
 /* line 37, ../sass/_console.scss */
-form {
+#console-container form {
   margin: 0px auto;
   border-radius: 40px;
   text-align: center;
@@ -276,6 +276,12 @@ ul li {
 }
 
 /* line 53, ../sass/_exposition.scss */
+.consent-form * {
+  font-size: 10pt;
+  line-height: 9pt;
+}
+
+/* line 58, ../sass/_exposition.scss */
 input[type=email] {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
@@ -289,7 +295,7 @@ input[type=email] {
   font-size: 16pt;
 }
 
-/* line 66, ../sass/_exposition.scss */
+/* line 71, ../sass/_exposition.scss */
 input[type=email]:focus {
   box-shadow: 0 0 5px #1c9ded;
   padding: 3px 0px 3px 13px;
@@ -297,7 +303,7 @@ input[type=email]:focus {
   border: 1px solid #1c9ded;
 }
 
-/* line 73, ../sass/_exposition.scss */
+/* line 78, ../sass/_exposition.scss */
 input[type=submit] {
   background-color: #1c9ded;
   border-radius: 30px;
@@ -308,14 +314,93 @@ input[type=submit] {
   top: -2px;
 }
 
-/* line 83, ../sass/_exposition.scss */
+/* line 88, ../sass/_exposition.scss */
 input[type=submit]:hover {
   background-color: #5de0f4;
 }
 
-/* line 87, ../sass/_exposition.scss */
+/* line 92, ../sass/_exposition.scss */
 input[type=submit]:active {
   background-color: #2ed7f0;
+}
+
+/* line 97, ../sass/_exposition.scss */
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+/* line 101, ../sass/_exposition.scss */
+#start-button {
+  display: none;
+}
+
+/* line 105, ../sass/_exposition.scss */
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 115, ../sass/_exposition.scss */
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* line 119, ../sass/_exposition.scss */
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #99a1a7;
+}
+
+/* line 126, ../sass/_exposition.scss */
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #99a1a7;
+}
+
+/* line 135, ../sass/_exposition.scss */
+.big-checkbox + label {
+  padding: 18px;
+}
+
+/* line 139, ../sass/_exposition.scss */
+.big-checkbox:checked + label:after {
+  font-size: 28px;
+  left: 6px;
+}
+
+/* line 144, ../sass/_exposition.scss */
+.tag {
+  font-family: Arial, sans-serif;
+  width: 200px;
+  position: relative;
+  top: 5px;
+  right: -35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+}
+
+/* line 156, ../sass/_exposition.scss */
+.consent-box {
+  width: 30%;
+  margin: 0px auto;
+}
+
+/* line 161, ../sass/_exposition.scss */
+#incentive-container {
+  display: none;
 }
 
 /* _incentives.scss */
