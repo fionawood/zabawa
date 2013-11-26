@@ -17,8 +17,8 @@ for(var i = 0; i < n; i++) {
 function resizeCanvas(){
     var con = document.getElementById("console-container"),
         canvas = document.getElementById("myCanvas"),   
-        width = con.offsetWidth,
-        height = con.offsetHeight;
+        width = con.clientWidth,
+        height = con.clientHeight;
     
     canvas.width = width;
     canvas.height = height;
