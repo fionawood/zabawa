@@ -45,8 +45,8 @@ function draw(c){
 
     context.fillStyle="#000000";
     context.fillText(scrambled[c],x,y+10);
-    if( x<r || x>myCanvas.width-r) dx=-dx;
-    if( y<r || y>myCanvas.height-r) dy=-dy;
+    if( x<r+5 || x>myCanvas.width-r-5) dx=-dx;
+    if( y<r+5 || y>myCanvas.height-r-65) dy=-dy;
     x+=dx;
     y+=dy;
 }

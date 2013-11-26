@@ -51,8 +51,8 @@ function draw(i){
 
     context.fillStyle="#000000";
     context.fillText(ws[i],xs[i]-20,ys[i]+10);
-    if( xs[i]<rs[i] || xs[i]>myCanvas.width-rs[i]) dx[i]=-dx[i];
-    if( ys[i]<rs[i] || ys[i]>myCanvas.height-rs[i]) dy[i]=-dy[i];
+    if( xs[i]<rs[i]+5 || xs[i]>myCanvas.width-rs[i]-5) dx[i]=-dx[i];
+    if( ys[i]<rs[i]+5 || ys[i]>myCanvas.height-rs[i]-65) dy[i]=-dy[i];
     xs[i]+=dx[i];
     ys[i]+=dy[i];
 }
