@@ -3,5 +3,5 @@
 	$dbPort = 3306;
 	$dbUsername = "cs279_zabawa";
 	$dbPass = "1ntrinsic!";
-	$dbName = "db_zabawa";
+	$dbName = "cs279_zabawa";
 ?>
