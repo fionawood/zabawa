@@ -1,7 +1,3 @@
-
-var context;
-var container;
-
 var dx=2;
 var dy=2;
 
@@ -18,6 +14,48 @@ for(var i = 0; i < n; i++) {
     scrambled[i] = words[i].split('').sort(function(){return 0.5-Math.random()}).join('');
 }
 
+function resizeCanvas(){
+    var con = document.getElementById("console-container"),
+        canvas = document.getElementById("myCanvas"),   
+        width = con.offsetWidth,
+        height = con.offsetHeight;
+    
+    canvas.width = width;
+    canvas.height = height;
+}
+
+window.onresize = resizeCanvas;
+window.onload = resizeCanvas;
+    
+    
+function draw(c){
+    var context= myCanvas.getContext('2d');
+
+    context.textAlign="center";
+    //context.clearRect(0,0,600,600);
+    context.beginPath();
+    context.strokeStyle="#000000";
+    context.fillStyle="#ffffff";
+    context.arc(x,y,r,0,Math.PI*2,true);
+    context.closePath();
+    context.stroke();
+    context.fill();
+
+    context.font="30px Arial";
+
+    context.fillStyle="#000000";
+    context.fillText(scrambled[c],x,y+10);
+    if( x<5+r || x>myCanvas.width-5) dx=-dx;
+    if( y<5+r || y>myCanvas.height-5) dy=-dy;
+    x+=dx;
+    y+=dy;
+}
+
+function drawAll() {
+    var context= myCanvas.getContext('2d');
+    context.clearRect(0,0,myCanvas.width,myCanvas.height);
+    draw(current);
+}
 
 $("#input-form").submit(function( event ) {
     event.preventDefault();
@@ -42,54 +80,5 @@ var process_input = function(cmd_text) {
     command_found = false;
 
 };
-
-function resizeCanvas(){
-    console.log("hi");
-    var con = document.getElementById("console-container"),
-        canvas = document.getElementById("myCanvas"),
-        aspect = canvas.height/canvas.width,    
-        width = con.offsetWidth,
-        height = con.offsetHeight;
-
-    canvas.width = width;
-    canvas.height = Math.round(width * aspect);
-    drawAll();
-}
-
-window.onresize = resizeCanvas;
-window.onload = resizeCanvas;
-
-
-function draw(c){
-    context= myCanvas.getContext('2d');
-    context.canvas.width  = window.innerWidth;
-    context.canvas.height = window.innerHeight;
-
-    context.textAlign="center";
-    //context.clearRect(0,0,600,600);
-    context.beginPath();
-    context.strokeStyle="#000000";
-    context.fillStyle="#ffffff";
-    context.arc(x,y,r,0,Math.PI*2,true);
-    context.closePath();
-    context.stroke();
-    context.fill();
-
-    context.font="30px Arial";
-
-    context.fillStyle="#000000";
-    context.fillText(scrambled[c],x,y+10);
-    if( x<5+r || x>myCanvas.width-5) dx=-dx;
-    if( y<5+r || y>myCanvas.height-5) dy=-dy;
-    x+=dx;
-    y+=dy;
-}
-
-function drawAll() {
-    context= myCanvas.getContext('2d');
-    context.clearRect(0,0,myCanvas.width,myCanvas.height);
-    draw(current);
-}
-
 
 setInterval( function() { drawAll(); }, 30 );
