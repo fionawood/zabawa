@@ -5,9 +5,9 @@ var dx=2;
 var dy=2;
 
 var x=200;
-var y=400;
+var y=100;
 var r=100;
-var words=["ant","hill","box","climb","pinhole","grass","hungry"]
+var words=["ant","hill","box","climb","pinhole","grass","hungry","rat","leg"]
 var n = 7;
 var scrambled = new Array();
 
@@ -33,15 +33,15 @@ function draw(c){
 
     context.fillStyle="#000000";
     context.fillText(scrambled[c],x,y+10);
-    if( x<0+r || x>600-r) dx=-dx;
-    if( y<0+r || y>600-r) dy=-dy;
+    if( x<0+r || x>myCanvas.width-r) dx=-dx;
+    if( y<0+r || y>myCanvas.height-r) dy=-dy;
     x+=dx;
     y+=dy;
 }
 
 function drawAll() {
     context= myCanvas.getContext('2d');
-    context.clearRect(0,0,600,600);
+    context.clearRect(0,0,myCanvas.width,myCanvas.height);
     draw(current);
 }
 
