@@ -2,21 +2,21 @@
 
 var xs = new Array();
 var ys = new Array();
-var rs = new Array();
 var ws = new Array();
 
 var dx=[4,-4,4,4,4];
 var dy=[4,4,4,-4,4];
 
+var r = 60;
+
 ws[0]="fox";
 var nouns = ["cat","fox"];
-ws=["fox","the","say","red","cat","eat","rat",];
+var ws=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"]
 
 var speed=8;
 for(var i = 0; i  < ws.length; i++) {
     xs[i] = Math.random()*200+100;
     ys[i] = Math.random()*300+100;
-    rs[i] = 40;
     if(dx[i-1]>0) dx[i] = Math.random()*speed;
     else dx[i] = Math.random()*-speed;
     if(dy[i-1]>0) dy[i] = Math.random()*speed;
@@ -39,21 +39,23 @@ window.onload = resizeCanvas;
 
 function draw(i){
     var context= myCanvas.getContext('2d');
+
+    context.textAlign="center";
     //context.clearRect(0,0,600,600);
     context.beginPath();
     context.strokeStyle="#000000";
     context.fillStyle="#ffffff";
-    context.arc(xs[i],ys[i],rs[i],0,Math.PI*2,true);
+    context.arc(xs[i],ys[i],r,0,Math.PI*2,true);
     context.closePath();
     context.stroke();
     context.fill();
 
-    context.font="30px Arial";
+    context.font="25px Arial";
 
     context.fillStyle="#000000";
-    context.fillText(ws[i],xs[i]-20,ys[i]+10);
-    if( xs[i]<rs[i]+5 || xs[i]>myCanvas.width-rs[i]-5) dx[i]=-dx[i];
-    if( ys[i]<rs[i]+5 || ys[i]>myCanvas.height-rs[i]-65) dy[i]=-dy[i];
+    context.fillText(ws[i],xs[i],ys[i]+10);
+    if( xs[i]<r+5 || xs[i]>myCanvas.width-r-5) dx[i]=-dx[i];
+    if( ys[i]<r+5 || ys[i]>myCanvas.height-r-65) dy[i]=-dy[i];
     xs[i]+=dx[i];
     ys[i]+=dy[i];
 }

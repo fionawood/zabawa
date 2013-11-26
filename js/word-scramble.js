@@ -4,13 +4,13 @@ var dy=2;
 var x=200;
 var y=200;
 var r=100;
-var words=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"]
+var ws=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"]
 var scrambled = new Array();
 
 var current=0;
 
-for(var i = 0; i < words.length; i++) {
-    scrambled[i] = words[i].split('').sort(function(){return 0.5-Math.random()}).join('');
+for(var i = 0; i < ws.length; i++) {
+    scrambled[i] = ws[i].split('').sort(function(){return 0.5-Math.random()}).join('');
 }
 
 function resizeCanvas(){
@@ -65,7 +65,7 @@ $("#input-form").submit(function( event ) {
 var process_input = function(cmd_text) {
     var command_found = false;
 
-    var regex = new RegExp((words[current]), "gi");
+    var regex = new RegExp((ws[current]), "gi");
     if (cmd_text.match(regex) !== null) {
         current++;
         cmd_text="";
