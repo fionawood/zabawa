@@ -24,5 +24,4 @@ function makeURL(page) {
 }
 
 var firstGame = document.getElementById("firstGame");
-firstGame.href = makeURL($game_sequence[0]);
-console.log($game_sequence[0]);
+firstGame.href = makeURL("text-adventure");
