@@ -6,6 +6,8 @@ var y=200;
 var r=100;
 var scrambled = new Array();
 
+var ws = words;
+
 var current=0;
 
 for(var i = 0; i < ws.length; i++) {
@@ -62,7 +64,6 @@ $("#input-form").submit(function( event ) {
 });
 
 var process_input = function(cmd_text) {
-
     var regex = new RegExp((ws[current]), "gi");
     if (cmd_text.match(regex) !== null) {
         cmd_text="";
@@ -78,8 +79,12 @@ var process_input = function(cmd_text) {
         else if (incentive_mode == "badges") {
             assign_level(current_stage.incentive);
         }
+        ws.splice(current,1);
+        scrambled.splice(current,1);
 
-        current++;
+    } else {
+        if(current<ws.length-1) current++;
+        else current=0;
     }
     $("#input-form input[type=text]").val("");
 

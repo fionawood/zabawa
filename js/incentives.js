@@ -1,7 +1,7 @@
 // incentive mode switch - options are "badges", "leaders", "levels", and "none"
 incentive_mode = "badges";
 
-var ws=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"];
+var words=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"];
 var nouns=["ant","hill","box","human","climb","pinhole","grass","rat","leg","man","sky","outside"];
 
 // badge logic

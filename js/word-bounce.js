@@ -6,6 +6,8 @@ var ys = new Array();
 var dx=[4,-4,4,4,4];
 var dy=[4,4,4,-4,4];
 
+var ws = words;
+
 var r = 60;
 
 var num_found = 0;
