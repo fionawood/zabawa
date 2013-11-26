@@ -409,29 +409,28 @@ input[type=checkbox] {
   position: absolute;
   width: 100%;
   bottom: 0px;
-  height: 14%;
+  height: 10%;
   background-color: #dee1e1;
   border-top: 1px solid #505657;
-  overflow: hidden;
 }
 
-/* line 14, ../sass/_incentives.scss */
+/* line 13, ../sass/_incentives.scss */
 #badges {
   height: inherit;
 }
-/* line 16, ../sass/_incentives.scss */
+/* line 15, ../sass/_incentives.scss */
 #badges img {
   margin: 0px;
   padding: 0px;
   position: relative;
   border-radius: 2px;
 }
-/* line 23, ../sass/_incentives.scss */
+/* line 22, ../sass/_incentives.scss */
 #badges ul {
   margin-top: 4px;
   list-style-type: none;
 }
-/* line 28, ../sass/_incentives.scss */
+/* line 27, ../sass/_incentives.scss */
 #badges li {
   margin: 0px 2px 0px 2px;
   text-align: center;
@@ -441,20 +440,20 @@ input[type=checkbox] {
   padding: 10px 10px 3px 10px;
 }
 
-/* line 39, ../sass/_incentives.scss */
+/* line 38, ../sass/_incentives.scss */
 h3 {
   margin: -10px 0px -10px 0px;
   font-size: 8pt;
   font-weight: 700;
 }
 
-/* line 47, ../sass/_incentives.scss */
+/* line 46, ../sass/_incentives.scss */
 #leaders h1 {
   text-align: center;
   font-size: 32pt;
 }
 
-/* line 54, ../sass/_incentives.scss */
+/* line 53, ../sass/_incentives.scss */
 #levels h1 {
   text-align: left;
   font-size: 32pt;

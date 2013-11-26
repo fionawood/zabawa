@@ -75,7 +75,7 @@ var assign_leader = function(leader_id) {
     $(".incentives #leaders").html("<h1> You're currently farther in the game than <strong class ='dark'>" + percentage + " </strong> of other players! </h1>");
 };
 
-var assign_level = function(badge_id) {
+var assign_level = function(level_id) {
     //level stuff here
 };
 
