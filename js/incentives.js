@@ -10,47 +10,47 @@ var adventure_badges = {
     1: {
         name: "Escapee",
         description: "You've escaped the box.",
-        image: "<img src='img/noun_project_9152.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_9152.svg' width=40 height=40>",
     },
     2: {
         name: "Satiated",
         description: "You've feasted.",
-        image: "<img src='img/noun_project_4002.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_4002.svg' width=40 height=40>",
     },
     3: {
         name: "Invader",
         description: "You have become an agent inside of the man's body.",
-        image: "<img src='img/noun_project_630.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_630.svg' width=40 height=40>",
     },
     4: {
         name: "Disintegrated",
         description: "Your body has been dissolved into its constituent chemicals.",
-        image: "<img src='img/noun_project_3863.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_3863.svg' width=40 height=40>",
     },
     5: {
         name: "Replicant",
         description: "You have made more of yourself.",
-        image: "<img src='img/svg_13582-01.svg' width=70 height=70>",
+        image: "<img src='img/svg_13582-01.svg' width=40 height=40>",
     },    
     6: {
         name: "Infection", 
         description: "You and your offspring have taken over the man's body, and are now proceeding to infect other hosts at pandemic levels.",
-        image: "<img src='img/noun_project_613.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_613.svg' width=40 height=40>",
     },
     7: {
         name: "Mad Cow",
         description: "You are the first of a line of prions that terrorize the human race for generations to come.",
-        image: "<img src='img/noun_project_685.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_685.svg' width=40 height=40>",
     },
     8: {
         name: "Parasitic",
         description: "You can now leech the resources of your host at will.",
-        image: "<img src='img/noun_project_18917.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_18917.svg' width=40 height=40>",
     },
     9: {
         name: "Plague",
         description: "You are so successfuly at reproducing and infecting hosts that your race is compared to the Spanish Flu and Bubonic Plague.",
-        image: "<img src='img/noun_project_184.svg' width=70 height=70>",
+        image: "<img src='img/noun_project_184.svg' width=40 height=40>",
     },
 };
 
@@ -85,7 +85,7 @@ var assign_level = function(level_id) {
 var assign_badge_word = function(word) {
     w = word;
     img = '<img src=\'img/'
-    img=img.concat(w.concat('.svg\'width=70 height=70>'));
+    img=img.concat(w.concat('.svg\'width=40 height=40>'));
     description = w.concat(' found');
     $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
     $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
