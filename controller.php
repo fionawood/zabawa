@@ -3,7 +3,7 @@
 	include "config.php";
 	$SESSION_ID = $_SESSION['id'];
 
-	echo 'here we are'
+	echo 'here we are';
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
