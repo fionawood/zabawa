@@ -22,3 +22,7 @@ function makeURL(page) {
   x=x.concat(".html");
   return x;
 }
+
+var firstGame = document.getElementById("firstGame");
+firstGame.href = makeURL($game_sequence[0]);
+console.log($game_sequence[0]);
