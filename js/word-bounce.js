@@ -8,19 +8,20 @@ var ws = new Array();
 var dx=[4,-4,4,4,4];
 var dy=[4,4,4,-4,4];
 
-xs[0]=100;
-ys[0]=150;
-rs[0]=40;
 ws[0]="fox";
-
-
-var n=5;
-
-xs=[100,200,300,400,200];
-ys=[400,300,100,200,200];
-rs=[40,40,40,40,40];
 var nouns = ["cat","fox"];
-ws=["fox","the","say","red","cat"]
+ws=["fox","the","say","red","cat","eat","rat",];
+
+var speed=8;
+for(var i = 0; i  < ws.length; i++) {
+    xs[i] = Math.random()*200+100;
+    ys[i] = Math.random()*300+100;
+    rs[i] = 40;
+    if(dx[i-1]>0) dx[i] = Math.random()*speed;
+    else dx[i] = Math.random()*-speed;
+    if(dy[i-1]>0) dy[i] = Math.random()*speed;
+    else dy[i] = Math.random()*-speed;
+}
 
 
 function resizeCanvas(){
@@ -60,7 +61,7 @@ function draw(i){
 function drawAll() {
     context= myCanvas.getContext('2d');
     context.clearRect(0,0,myCanvas.width,myCanvas.height);
-    for(var i = 0; i < n; i++) {
+    for(var i = 0; i < ws.length; i++) {
         draw(i);
     }
 }

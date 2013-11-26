@@ -4,13 +4,12 @@ var dy=2;
 var x=200;
 var y=200;
 var r=100;
-var words=["ant","hill","box","climb","pinhole","grass","hungry","rat","leg"]
-var n = 7;
+var words=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"]
 var scrambled = new Array();
 
 var current=0;
 
-for(var i = 0; i < n; i++) {
+for(var i = 0; i < words.length; i++) {
     scrambled[i] = words[i].split('').sort(function(){return 0.5-Math.random()}).join('');
 }
 
@@ -68,10 +67,8 @@ var process_input = function(cmd_text) {
 
     var regex = new RegExp((words[current]), "gi");
     if (cmd_text.match(regex) !== null) {
-        console.log("hi");
         current++;
         cmd_text="";
-        console.log("sup");
         if(incentive_mode=="levels") {
             next_level();
         }
