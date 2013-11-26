@@ -14,13 +14,13 @@ ys[0]=150;
 rs[0]=40;
 ws[0]="fox";
 
-var nouns = ["cat","fox"];
 
 var n=5;
 
-xs=[100,200,300,400,500];
-ys=[400,300,100,200,500];
+xs=[100,200,300,400,200];
+ys=[400,300,100,200,200];
 rs=[40,40,40,40,40];
+var nouns = ["cat","fox"];
 ws=["fox","the","say","red","cat"]
 
 function draw(i){
@@ -38,15 +38,15 @@ function draw(i){
 
     context.fillStyle="#000000";
     context.fillText(ws[i],xs[i]-20,ys[i]+10);
-    if( xs[i]<0+rs[i] || xs[i]>600-rs[i]) dx[i]=-dx[i];
-    if( ys[i]<0+rs[i] || ys[i]>600-rs[i]) dy[i]=-dy[i];
+    if( xs[i]<5+rs[i] || xs[i]>myCanvas.width-rs[i]-5) dx[i]=-dx[i];
+    if( ys[i]<5+rs[i] || ys[i]>myCanvas.height-rs[i]-5) dy[i]=-dy[i];
     xs[i]+=dx[i];
     ys[i]+=dy[i];
 }
 
 function drawAll() {
     context= myCanvas.getContext('2d');
-    context.clearRect(0,0,600,600);
+    context.clearRect(0,0,myCanvas.width,myCanvas.height);
     for(var i = 0; i < n; i++) {
         draw(i);
     }
