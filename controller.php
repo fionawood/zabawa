@@ -7,7 +7,7 @@
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
-	$game_sequence = ['text-adventure','word-bounce','word-scramble'];
+	$game_sequence = array('text-adventure','word-bounce','word-scramble');
 	shuffle($game_sequence);
 	echo $game_sequence;
 	$mysqli->query("INSERT INTO user (id, first_game, second_game, third_game) VALUES ('$SESSION_ID', '$game_sequence[0]', '$game_sequence[1]', '$game_sequence[2]')");
