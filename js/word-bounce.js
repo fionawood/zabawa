@@ -1,5 +1,4 @@
 
-var context;
 
 var xs = new Array();
 var ys = new Array();
@@ -22,6 +21,20 @@ ys=[400,300,100,200,200];
 rs=[40,40,40,40,40];
 var nouns = ["cat","fox"];
 ws=["fox","the","say","red","cat"]
+
+
+function resizeCanvas(){
+    var con = document.getElementById("console-container"),
+        canvas = document.getElementById("myCanvas"),   
+        width = con.clientWidth,
+        height = con.clientHeight;
+    
+    canvas.width = width;
+    canvas.height = height;
+}
+
+window.onresize = resizeCanvas;
+window.onload = resizeCanvas;
 
 function draw(i){
     context= myCanvas.getContext('2d');
