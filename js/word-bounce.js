@@ -37,7 +37,7 @@ window.onresize = resizeCanvas;
 window.onload = resizeCanvas;
 
 function draw(i){
-    context= myCanvas.getContext('2d');
+    var context= myCanvas.getContext('2d');
     //context.clearRect(0,0,600,600);
     context.beginPath();
     context.strokeStyle="#000000";
@@ -51,8 +51,8 @@ function draw(i){
 
     context.fillStyle="#000000";
     context.fillText(ws[i],xs[i]-20,ys[i]+10);
-    if( xs[i]<5+rs[i] || xs[i]>myCanvas.width-rs[i]-5) dx[i]=-dx[i];
-    if( ys[i]<5+rs[i] || ys[i]>myCanvas.height-rs[i]-5) dy[i]=-dy[i];
+    if( xs[i]<rs[i] || xs[i]>myCanvas.width-rs[i]) dx[i]=-dx[i];
+    if( ys[i]<rs[i] || ys[i]>myCanvas.height-rs[i]) dy[i]=-dy[i];
     xs[i]+=dx[i];
     ys[i]+=dy[i];
 }
