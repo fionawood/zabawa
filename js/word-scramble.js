@@ -1,24 +1,36 @@
-
-var context;
-
 var dx=2;
 var dy=2;
 
 var x=200;
-var y=400;
+var y=200;
 var r=100;
-var words=["ant","hill","box","climb","pinhole","grass","hungry"]
-var n = 7;
 var scrambled = new Array();
+
+var ws = words;
 
 var current=0;
 
-for(var i = 0; i < n; i++) {
-    scrambled[i] = words[i].split('').sort(function(){return 0.5-Math.random()}).join('');
+for(var i = 0; i < ws.length; i++) {
+    scrambled[i] = ws[i].split('').sort(function(){return 0.5-Math.random()}).join('');
 }
 
+function resizeCanvas(){
+    var con = document.getElementById("console-container"),
+        canvas = document.getElementById("myCanvas"),   
+        width = con.clientWidth,
+        height = con.clientHeight;
+    
+    canvas.width = width;
+    canvas.height = height;
+}
+
+window.onresize = resizeCanvas;
+window.onload = resizeCanvas;
+    
+    
 function draw(c){
-    context= myCanvas.getContext('2d');
+    var context= myCanvas.getContext('2d');
+
     context.textAlign="center";
     //context.clearRect(0,0,600,600);
     context.beginPath();
@@ -33,20 +45,17 @@ function draw(c){
 
     context.fillStyle="#000000";
     context.fillText(scrambled[c],x,y+10);
-    if( x<0+r || x>600-r) dx=-dx;
-    if( y<0+r || y>600-r) dy=-dy;
+    if( x<r+5 || x>myCanvas.width-r-5) dx=-dx;
+    if( y<r+5 || y>myCanvas.height-r-65) dy=-dy;
     x+=dx;
     y+=dy;
 }
 
 function drawAll() {
-    context= myCanvas.getContext('2d');
-    context.clearRect(0,0,600,600);
+    var context= myCanvas.getContext('2d');
+    context.clearRect(0,0,myCanvas.width,myCanvas.height);
     draw(current);
 }
-
-
-setInterval( function() { drawAll(); }, 30 );
 
 $("#input-form").submit(function( event ) {
     event.preventDefault();
@@ -55,18 +64,30 @@ $("#input-form").submit(function( event ) {
 });
 
 var process_input = function(cmd_text) {
-    var command_found = false;
-
-    var regex = new RegExp((words[current]), "gi");
+    var regex = new RegExp((ws[current]), "gi");
     if (cmd_text.match(regex) !== null) {
-        current++;
         cmd_text="";
-        console.log("sup");
-        if(incentive_mode=="levels") {
-            next_level();
-        }
-    }
+        dx*=1+Math.random()*.1;
+        dy*=1+Math.random()*.1;
 
-    command_found = false;
+        if (incentive_mode == "badges") {
+            assign_badge_word(ws[current]);
+        }
+        else if (incentive_mode == "leaders") {
+            assign_leader(current_stage.incentive);
+        }
+        else if (incentive_mode == "badges") {
+            assign_level(current_stage.incentive);
+        }
+        ws.splice(current,1);
+        scrambled.splice(current,1);
+
+    } else {
+        if(current<ws.length-1) current++;
+        else current=0;
+    }
+    $("#input-form input[type=text]").val("");
 
 };
+
+setInterval( function() { drawAll(); }, 30 );

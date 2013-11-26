@@ -21,6 +21,7 @@
     </head>
 
     <body>
+    <p class = "large-text centered"> What word am I thinking of? Keep guessing until you solve them all. </div>
     <div class = "container">
 
         <!--[if lt IE 7]>
@@ -31,18 +32,18 @@
 
         <section class = "console">
 
-        <div id = "container">
-
+        <div id = "console-container">
             
-                <canvas id="myCanvas" width="600" height="480"></canvas>
-
-        </div>
-
-            <div id = "input-form">
+            <canvas id="myCanvas" width="600" height="400" style="position: relative; top: -15px; left: -15px;"></canvas>
+            <div id = "input-form" style="position: relative; top: -60px;">
                 <form>
                 <input type="text" autofocus="autofocus"> <input type="submit" value="Unscramble!"/>
                 </form> 
             </div>
+
+
+        </div>
+
 
 
         </section>
@@ -89,7 +90,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/system.js"></script>
     <script src="js/incentives.js"></script>
-    <script src="js/text-adventure.js"></script>
+    <script src="js/word-scramble.js"></script>
 
     </body>
 </html>
