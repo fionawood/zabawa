@@ -2,17 +2,13 @@
 
 var xs = new Array();
 var ys = new Array();
-var ws = new Array();
 
 var dx=[4,-4,4,4,4];
 var dy=[4,4,4,-4,4];
 
 var r = 60;
 
-ws[0]="fox";
-var nouns = ["cat","fox"];
-var ws=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"]
-
+var num_found = 0;
 var speed=8;
 for(var i = 0; i  < ws.length; i++) {
     xs[i] = Math.random()*200+100;
@@ -68,9 +64,6 @@ function drawAll() {
     }
 }
 
-
-setInterval( function() { drawAll(); }, 30 );
-
 $("#input-form").submit(function( event ) {
     event.preventDefault();
     user_input = $("#input-form input").val();
@@ -78,23 +71,29 @@ $("#input-form").submit(function( event ) {
 });
 
 var process_input = function(cmd_text) {
-    var command_found = false;
 
     for (var i=0;i<nouns.length;i++)
     {
         var regex = new RegExp((nouns[i]), "gi");
         if (cmd_text.match(regex) !== null) {
-            if(incentive_mode=="levels") {
-                next_level();
+            cmd_text="";
+            num_found++;
+
+            if (incentive_mode == "badges") {
+               assign_badge_word(nouns[i]);
+            }
+            else if (incentive_mode == "leaders") {
+                assign_leader(current_stage.incentive);
+            }
+            else if (incentive_mode == "badges") {
+                assign_level(current_stage.incentive);
             }
         }
-        command_found=true;
     }
-
-    if (command_found == false) {
-        console.log("oops");
-    }
-
-    command_found = false;
+    $("#input-form input[type=text]").val("");
+    drawAll();
 
 };
+
+
+setInterval( function() { drawAll(); }, 30 );

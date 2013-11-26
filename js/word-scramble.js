@@ -4,7 +4,6 @@ var dy=2;
 var x=200;
 var y=200;
 var r=100;
-var ws=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"]
 var scrambled = new Array();
 
 var current=0;
@@ -63,18 +62,26 @@ $("#input-form").submit(function( event ) {
 });
 
 var process_input = function(cmd_text) {
-    var command_found = false;
 
     var regex = new RegExp((ws[current]), "gi");
     if (cmd_text.match(regex) !== null) {
-        current++;
         cmd_text="";
-        if(incentive_mode=="levels") {
-            next_level();
-        }
-    }
+        dx*=1+Math.random()*.1;
+        dy*=1+Math.random()*.1;
 
-    command_found = false;
+        if (incentive_mode == "badges") {
+            assign_badge_word(ws[current]);
+        }
+        else if (incentive_mode == "leaders") {
+            assign_leader(current_stage.incentive);
+        }
+        else if (incentive_mode == "badges") {
+            assign_level(current_stage.incentive);
+        }
+
+        current++;
+    }
+    $("#input-form input[type=text]").val("");
 
 };
 

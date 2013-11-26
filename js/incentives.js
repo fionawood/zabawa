@@ -1,6 +1,9 @@
 // incentive mode switch - options are "badges", "leaders", "levels", and "none"
 incentive_mode = "badges";
 
+var ws=["ant","hill","box","human","climb","pinhole","grass","hungry","rat","leg","man","cramped","sky","outside","consume","glance","eat"];
+var nouns=["ant","hill","box","human","climb","pinhole","grass","rat","leg","man","sky","outside"];
+
 // badge logic
 
 var adventure_badges = {
@@ -77,6 +80,15 @@ var assign_leader = function(leader_id) {
 
 var assign_level = function(level_id) {
     //level stuff here
+};
+
+var assign_badge_word = function(word) {
+    w = word;
+    img = '<img src=\'img/'
+    img=img.concat(w.concat('.svg\'width=70 height=70>'));
+    description = w.concat(' found');
+    $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
+    $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
 };
 
 
