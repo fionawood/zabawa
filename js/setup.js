@@ -16,12 +16,12 @@ function shuffle(array) {
 }
 
 function makeURL(page) {
-  //var x = "http://zabawa.cs179.org/";
-  var x = "file://localhost/Users/fionawwood/Documents/zabawa/";
+  var x = "http://zabawa.cs179.org/";
+  //var x = "file://localhost/Users/fionawwood/Documents/zabawa/";
   x=x.concat(page);
   x=x.concat(".html");
   return x;
 }
 
 var firstGame = document.getElementById("firstGame");
-firstGame.href = makeURL("text-adventure");
+firstGame.href = makeURL($game_sequence[0]);

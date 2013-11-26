@@ -3,8 +3,6 @@
 	include "config.php";
 	$SESSION_ID = $_SESSION['id'];
 
-	echo 'here we are';
-
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
 	$game_sequence = array('text-adventure','word-bounce','word-scramble');
