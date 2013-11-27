@@ -2,6 +2,7 @@
 	session_start();
 	include "config.php";
 	$SESSION_ID = $_SESSION['id'];
+	echo $SESSION_ID
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
@@ -13,5 +14,4 @@
 	$incentive_sequence = array('badges','levels','leader');
 	shuffle($incentive_sequence);
 	$mysqli->query("INSERT INTO user (id, first_incentive, second_incentive, third_incentive) VALUES ('$SESSION_ID', '$incentive_sequence[0]', '$incentive_sequence[1]', '$incentive_sequence[2]')");
-
 ?>
