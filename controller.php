@@ -1,10 +1,6 @@
 <?	
 	session_start();
 
-	if (!isset($_SESSION['id'])) {
-	header('Location: controller.php');
-	}
-
 	if(isset($_SESSION['views']))
 	    $_SESSION['visits'] = $_SESSION['visits']+ 1;
 	else
@@ -15,7 +11,7 @@
 	include "config.php";
 	$SESSION_ID = $_SESSION['id'];
 	echo "hello";
-	echo $SESSION_ID;
+	echo "id = ". $SESSION_ID;
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
