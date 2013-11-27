@@ -1,13 +1,16 @@
 <?	
 	session_start();
-	
+
+	if (!isset($_SESSION['id'])) {
+	header('Location: controller.php');
+	}
 
 	if(isset($_SESSION['views']))
-	    $_SESSION['views'] = $_SESSION['views']+ 1;
+	    $_SESSION['visits'] = $_SESSION['visits']+ 1;
 	else
-	    $_SESSION['views'] = 1;
+	    $_SESSION['visits'] = 1;
 
-	echo "views = ". $_SESSION['views']; 
+	echo "visits = ". $_SESSION['visits']; 
 
 	include "config.php";
 	$SESSION_ID = $_SESSION['id'];
