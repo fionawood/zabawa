@@ -2,7 +2,7 @@
 	session_start();
 	include "config.php";
 	$SESSION_ID = $_SESSION['id'];
-	echo $SESSION_ID
+	echo $SESSION_ID;
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
