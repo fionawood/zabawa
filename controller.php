@@ -1,5 +1,5 @@
 <?	
-	session_start();
+	echo session_start();
 
 	if(isset($_SESSION['views']))
 	    $_SESSION['visits'] = $_SESSION['visits']+ 1;
@@ -28,5 +28,6 @@
 	echo $incentive_sequence[0];
 	echo $incentive_sequence[1];
 	echo $incentive_sequence[2];
+
 	$mysqli->query("INSERT INTO user (id, first_incentive, second_incentive, third_incentive) VALUES ('$SESSION_ID', '$incentive_sequence[0]', '$incentive_sequence[1]', '$incentive_sequence[2]')");
 ?>
