@@ -1,4 +1,13 @@
-$(".next").hide().delay(18000).fadeIn(8000);
+var start;
+var elapsed;
+
+$(".next").hide().delay(18000).fadeIn(8000, function() {
+    start = new Date();
+});
+
+$('.next').click(function(){
+    elapsed = new Date() - start;
+});
 
 $('.consent-box input').click(function(){
     if ($("#consent-box").is (':checked'))
