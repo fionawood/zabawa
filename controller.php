@@ -13,6 +13,7 @@
 	$SESSION_ID = $_SESSION['id'];
 	echo "hello";
 	echo "id = ". $SESSION_ID;
+	echo session_id();
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
