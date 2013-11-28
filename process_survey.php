@@ -14,8 +14,8 @@
 									  enjoy_similar_q,
 									  replay_q,
 									  incentive_q) 
-					VALUES ('$SESSION_ID', 
-							'$SESSION_VISITS', 
+					VALUES ('$_SESSION['id']', 
+							'$_SESSION['views']', 
 							'$_SESSION['game_sequence'][$_SESSION['pair']]'',
 							'$_SESSION['incentive_sequence'][$_SESSION['pair']]'',
 							'$_GET['enjoy']',
