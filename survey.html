@@ -37,16 +37,16 @@
 
         <section class = "survey-questions centered">
 
-            <form id = "main_questions" action="process_survey.php" method="get"> 
+            <form id = "enjoy" action="process_survey.php" method="get"> 
             <p>How much did you <strong>enjoy playing</strong> the game? <br/>
             <input type="radio" id="enjoy-1" value="1" name="enjoy"/><label for="enjoy-1">not at all</label>
             <input type="radio" id="enjoy-2" value="2" name="enjoy"/><label for="enjoy-2">not much</label>
             <input type="radio" id="enjoy-3" value="3" name="enjoy"/><label for="enjoy-3">somewhat</label>
             <input type="radio" id="enjoy-4" value="4" name="enjoy"/><label for="enjoy-4">quite a bit</label>
             <input type="radio" id="enjoy-5" value="5" name="enjoy"/><label for="enjoy-5">really enjoyed it</label></p>
-            <!-- </form> -->
+            </form>
 
-            <!-- <form id = "challenge" action="process_survey.php" method="get">  -->
+            <form id = "challenge" action="process_survey.php" method="get"> 
             <p>How <strong>challenging</strong> did you find the game? <br/>
             <input type="radio" id="challenge-1" value="1" name="challenge"/><label for="challenge-1">not at all</label>
             <input type="radio" id="challenge-2" value="2" name="challenge" /><label for="challenge-2">not much</label>
@@ -96,7 +96,7 @@
 
         </section>
        
-        <p id = "start-button" class = "very-large-text centered"> <a href="#" id="nextGame" onclick="main_questions.submit(); last_question.submit();"> Proceed to then next game! &#9654; </a> </p>
+        <p id = "start-button" class = "very-large-text centered"> <a href="#" id="nextGame" onclick="enjoy.submit(); "> Proceed to then next game! &#9654; </a> </p>
         </section>
 
 
