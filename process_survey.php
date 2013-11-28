@@ -20,15 +20,6 @@
 	else
 		$incentive = 0;
 
-	echo 'id = '. $SESSION_ID;
-	echo '\nviews = '. $SESSION_VIEWS;
-	echo '\nenjoy = '. $enjoy;
-	echo '\nchallenge = '. $challenge;
-	echo '\nsimilar = '. $similar;
-	echo '\nenjoy_similar = '. $enjoy_similar;
-	echo '\nreplay = '. $replay;
-	echo '\nincentive = '. $incentive;
-
 
 	$mysqli->query("INSERT INTO game (user,
 									  views,
@@ -50,4 +41,13 @@
 							'$enjoy_similar',
 							'$replay,
 							'$incentive')");
+
+	echo 'id = '. $SESSION_ID;
+	echo ' views = '. $SESSION_VIEWS;
+	echo ' enjoy = '. $enjoy;
+	echo ' challenge = '. $challenge;
+	echo ' similar = '. $similar;
+	echo ' enjoy_similar = '. $enjoy_similar;
+	echo ' replay = '. $replay;
+	echo ' incentive = '. $incentive;
 ?>
