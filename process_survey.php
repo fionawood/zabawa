@@ -11,13 +11,11 @@
 	$enjoy = $_POST['enjoy'];
 	$challenge = $_POST['challenge'];
 	$similar = $_POST['similar'];
-	$enjoy_similar = $_POST['enjoy_similar'];
+	$enjoy_similar = $_POST['enjoy-similar'];
 	$replay = $_POST['replay'];
+	$incentive = $_POST['incentive'];
 
-	if(isset($_POST['incentive']))
-		$incentive = $_POST['incentive'];
-	else
-		$incentive = 0;
+	if(!isset($incentive)) $incentive = 0;
 
 	echo 'enjoy = '. $enjoy;
 	echo 'challenge = '. $challenge;
