@@ -35,7 +35,7 @@
 	}
 
 	var firstGame = document.getElementById("firstGame");
-	var game0 = <?php echo $_SESSION['game_sequence'][0]; ?>;
+	var game0 = "<?php echo $_SESSION['game_sequence'][0]; ?>";
 	console.log(game0);
 	firstGame.href = makeURL(game0);
 </script>
