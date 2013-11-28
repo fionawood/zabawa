@@ -10,10 +10,14 @@
 	$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
 	$enjoy = $_POST['enjoy'];
 	$challenge = $_POST['challenge'];
-	$similar = $_GET['similar'];
-	$enjoy_similar = $_GET['enjoy_similar'];
-	$replay = $_GET['replay'];
-	$incentive = $_GET['incentive'];
+	$similar = $_POST['similar'];
+	$enjoy_similar = $_POST['enjoy_similar'];
+	$replay = $_POST['replay'];
+
+	if(isset($_POST['incentive']))
+		$incentive = $_POST['incentive'];
+	else
+		$incentive = 0;
 
 	echo 'enjoy = '. $enjoy;
 	echo 'challenge = '. $challenge;
