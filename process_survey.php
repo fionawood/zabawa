@@ -6,8 +6,8 @@
 
 	$SESSION_ID = $_SESSION['id'];
 	$SESSION_VIEWS = $_SESSION['views'];
-	$game = $_SESSION['game_sequence'][$_SESSION['pair']];
-	$incentive = $_SESSION['incentive_sequence'][$_SESSION['pair']];
+	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
+	$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
 	$enjoy = $_GET['enjoy'];
 	$challenge = $_GET['challenge'];
 	$similar = $_GET['similar'];
@@ -16,6 +16,11 @@
 	$incentive = $_GET['incentive'];
 
 	echo 'enjoy = '. $enjoy;
+	echo 'challenge = '. $challenge;
+	echo 'similar = '. $similar;
+	echo 'enjoy_similar = '. $enjoy_similar;
+	echo 'replay = '. $replay;
+	echo 'incentive = '. $incentive;
 
 
 	$mysqli->query("INSERT INTO game (user,
@@ -30,8 +35,8 @@
 									  incentive_q) 
 					VALUES ('$SESSION_ID',
 							'$SESSION_VIEWS',
-							'$game',
-							'$incentive',
+							'$game_mode',
+							'$incentive_mode',
 							'$enjoy',
 							'$challenge',
 							'$similar',
