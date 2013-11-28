@@ -20,11 +20,15 @@
 	else
 		$incentive = 0;
 
+	$time = time();
+
 
 	$mysqli->query("INSERT INTO game (user,
 									  views,
 									  game,
 									  incentive,
+									  start_time,
+									  end_time,
 									  enjoy_q,
 									  challenge_q,
 									  similar_q,
@@ -35,6 +39,8 @@
 							'$SESSION_VIEWS',
 							'$game_mode',
 							'$incentive_mode',
+							'$time',
+							'$time',
 							'$enjoy',
 							'$challenge',
 							'$similar',
