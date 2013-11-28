@@ -8,5 +8,4 @@ function makeURL(page) {
 }
 
 var firstGame = document.getElementById("firstGame");
-console.log(firstGame);
-firstGame.href = makeURL(game0);
+firstGame.href = makeURL(game_mode);
