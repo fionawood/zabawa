@@ -22,38 +22,41 @@
 
 	$time = time();
 
+	if(!$mysqli->connect_errno)
+	{
+		$mysqli->query("INSERT INTO game (user,
+										  views,
+										  game,
+										  incentive,
+										  start_time,
+										  end_time,
+										  enjoy_q,
+										  challenge_q,
+										  similar_q,
+										  enjoy_similar_q,
+										  replay_q,
+										  incentive_q) 
+						VALUES ('$SESSION_ID',
+								'$SESSION_VIEWS',
+								'$game_mode',
+								'$incentive_mode',
+								'$time',
+								'$time',
+								'$enjoy',
+								'$challenge',
+								'$similar',
+								'$enjoy_similar',
+								'$replay,
+								'$incentive')");
+		
+		echo 'id = '. $SESSION_ID;
+		echo ' views = '. $SESSION_VIEWS;
+		echo ' enjoy = '. $enjoy;
+		echo ' challenge = '. $challenge;
+		echo ' similar = '. $similar;
+		echo ' enjoy_similar = '. $enjoy_similar;
+		echo ' replay = '. $replay;
+		echo ' incentive = '. $incentive;
+	}
 
-	$mysqli->query("INSERT INTO game (user,
-									  views,
-									  game,
-									  incentive,
-									  start_time,
-									  end_time,
-									  enjoy_q,
-									  challenge_q,
-									  similar_q,
-									  enjoy_similar_q,
-									  replay_q,
-									  incentive_q) 
-					VALUES ('$SESSION_ID',
-							'$SESSION_VIEWS',
-							'$game_mode',
-							'$incentive_mode',
-							'$time',
-							'$time',
-							'$enjoy',
-							'$challenge',
-							'$similar',
-							'$enjoy_similar',
-							'$replay,
-							'$incentive')");
-
-	echo 'id = '. $SESSION_ID;
-	echo ' views = '. $SESSION_VIEWS;
-	echo ' enjoy = '. $enjoy;
-	echo ' challenge = '. $challenge;
-	echo ' similar = '. $similar;
-	echo ' enjoy_similar = '. $enjoy_similar;
-	echo ' replay = '. $replay;
-	echo ' incentive = '. $incentive;
 ?>
