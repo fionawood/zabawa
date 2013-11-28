@@ -1,4 +1,4 @@
-<?	
+<?php
 	session_start();
 
 	if(isset($_SESSION['views']))
@@ -24,3 +24,17 @@
 
 	$mysqli->query("INSERT INTO user (id, visits, game0, game1, game2, incentive0, incentive1, incentive2) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_sequence[0]', '$game_sequence[1]', '$game_sequence[2]', '$incentive_sequence[0]', '$incentive_sequence[1]', '$incentive_sequence[2]')");
 ?>
+
+<script type=text/javascript>
+	function makeURL(page) {
+	  var x = "http://zabawa.cs179.org/";
+	  //var x = "file://localhost/Users/fionawwood/Documents/zabawa/";
+	  x=x.concat(page);
+	  x=x.concat(".html");
+	  return x;
+	}
+
+	var firstGame = document.getElementById("firstGame");
+	var game0 = <?php echo $_SESSION['game_sequence'][0]; ?>;
+	firstGame.href = makeURL(game0);
+</script>
