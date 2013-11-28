@@ -1,5 +1,6 @@
 <?php
-    $test = "text-adventure";
+    session_start();
+    $test = "test";
 
 ?>
 
