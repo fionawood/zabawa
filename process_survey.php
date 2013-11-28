@@ -15,6 +15,8 @@
 	$replay = $_GET['replay'];
 	$incentive = $_GET['incentive'];
 
+	echo 'here we are';
+
 
 	$mysqli->query("INSERT INTO game (user,
 									  views,
