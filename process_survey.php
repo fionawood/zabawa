@@ -8,8 +8,8 @@
 	$SESSION_VIEWS = $_SESSION['views'];
 	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
 	$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
-	$enjoy = $_GET['enjoy'];
-	$challenge = $_GET['challenge'];
+	$enjoy = $_POST['enjoy'];
+	$challenge = $_POST['challenge'];
 	$similar = $_GET['similar'];
 	$enjoy_similar = $_GET['enjoy_similar'];
 	$replay = $_GET['replay'];
