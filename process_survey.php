@@ -14,7 +14,7 @@
 	$enjoy_similar = $_POST['enjoy-similar'];
 	$replay = $_POST['replay'];
 	$incentive = $_POST['incentive'];
-	echo 'incentive = '. $incentive;
+	var_dump(isset($_POST['incentive']));
 
 	if(!isset($incentive)) $incentive = 0;
 
