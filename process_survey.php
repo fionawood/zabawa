@@ -20,8 +20,8 @@
 	else
 		$incentive = 0;
 
-	echo 'id = '. $SESSION_ID
-	echo '\nviews = '. $SESSION_VIEWS
+	echo 'id = '. $SESSION_ID;
+	echo '\nviews = '. $SESSION_VIEWS;
 	echo '\nenjoy = '. $enjoy;
 	echo '\nchallenge = '. $challenge;
 	echo '\nsimilar = '. $similar;
