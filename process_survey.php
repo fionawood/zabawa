@@ -3,6 +3,17 @@
 
 	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
+	$SESSION_ID = $_SESSION['id'];
+	$SESSION_VIEWS = $_SESSION['views'];
+	$game = $_SESSION['game_sequence'][$_SESSION['pair']];
+	$incentive = $_SESSION['incentive_sequence'][$_SESSION['pair']];
+	$enjoy = $_GET['enjoy'];
+	$challenge = $_GET['challenge'];
+	$similar = $_GET['similar'];
+	$enjoy_similar = $_GET['enjoy_similar'];
+	$replay = $_GET['replay'];
+	$incentive = $_GET['incentive'];
+
 
 	$mysqli->query("INSERT INTO game (user,
 									  views,
@@ -14,14 +25,14 @@
 									  enjoy_similar_q,
 									  replay_q,
 									  incentive_q) 
-					VALUES ('$_SESSION['id']', 
-							'$_SESSION['views']', 
-							'$_SESSION['game_sequence'][$_SESSION['pair']]'',
-							'$_SESSION['incentive_sequence'][$_SESSION['pair']]'',
-							'$_GET['enjoy']',
-							'$_GET['challenge']',
-							'$_GET['similar']',
-							'$_GET['enjoy_similar']',
-							'$_GET['replay']',
-							'$_GET['incentive']')");
+					VALUES ('$SESSION_ID',
+							'$SESSION_VIEWS',
+							'$game',
+							'$incentive',
+							'$enjoy',
+							'$challenge',
+							'$similar',
+							'$enjoy_similar',
+							'$replay,
+							'$incentive')");
 ?>
