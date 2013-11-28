@@ -6,7 +6,8 @@
 	else
 	    $_SESSION['visits'] = 1;
 	$SESSION_VISITS = $_SESSION['visits'];
-	$SESSION_ID = session_id();
+	$_SESSION['id'] = session_id();
+	$SESSION_ID = $_SESSION['id'];
 
 	include "config.php";
 
@@ -14,6 +15,9 @@
 
 	$game_sequence = array('text-adventure','word-bounce','word-scramble');
 	$incentive_sequence = array('badges','levels','leader');
+
+	$_SESSION['game_sequence'] = $game_sequence;
+	$_SESSION['incentive_sequence'] = $incentive_sequence;
 
 	shuffle($game_sequence);
 	shuffle($incentive_sequence);

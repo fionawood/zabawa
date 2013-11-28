@@ -24,5 +24,5 @@ function makeURL(page) {
 }
 
 var firstGame = document.getElementById("firstGame");
-var game0 = "<?php echo $game_sequence[0]; ?>";
+var game0 = <?php echo json_encode($_SESSION['game_sequence'][0]); ?>;
 firstGame.href = makeURL(game0);
