@@ -3,7 +3,7 @@ var elapsed;
 elapsed  = 2;
 $.ajax({
   type: "POST",
-  url: "process_survey.php",
+  url: "../process_survey.php",
   data: {time_elapsed:elapsed} ,
   success: function(data) {
     console.log("success");
@@ -20,7 +20,7 @@ $('.next').click(function(){
     elapsed = new Date() - start;
     $.ajax({
       type: "POST",
-      url: "process_survey.php",
+      url: "../process_survey.php",
       data: {time_elapsed:elapsed} ,
       success: function(data) {
         console.log("success");
