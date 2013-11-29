@@ -14,7 +14,7 @@ $('.next').click(function(){
 
 function submit_time() {
     console.log("here we go");
-    $.post("../test.php",{test:elapsed},function(result){
+    $.post("test.php",{test:elapsed},function(result){
         console.log("here we are");});
     console.log("hmm?");
 }
