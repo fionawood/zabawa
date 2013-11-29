@@ -2,7 +2,7 @@
 	session_start();
 	include "config.php";
 
-	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
+	// $mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
 	$SESSION_ID = $_SESSION['id'];
 	$SESSION_VIEWS = $_SESSION['views'];
