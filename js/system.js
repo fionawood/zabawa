@@ -13,10 +13,23 @@ $('.next').click(function(){
 });
 
 function submit_time() {
-    console.log("here we go");
-    $.post("test.php",{test:elapsed},function(result){
-        console.log("here we are");});
-    console.log("hmm?");
+    if (window.XMLHttpRequest)
+      {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp=new XMLHttpRequest();
+      }
+    else
+      {// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    xmlhttp.onreadystatechange=function()
+      {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+        document.getElementById("container").innerHTML=xmlhttp.responseText;
+        }
+      }
+    xmlhttp.open("GET","test.php?test="+elapsed,true);
+    xmlhttp.send();
 }
 
 $('.consent-box input').click(function(){
