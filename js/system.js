@@ -1,7 +1,7 @@
 var start;
 var elapsed;
 elapsed  = 2;
-$.get("survey.php",{ test:"help"});
+$.get("test.php",{ test:"help"});
 
 
 // $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
@@ -13,14 +13,6 @@ $(".next").hide().delay(180).fadeIn(8000, function() {
 $('.next').click(function(){
     console.log("clicked");
     elapsed = new Date() - start;
-    $.ajax({
-      type: "POST",
-      url: "../process_survey.php",
-      data: {time_elapsed:elapsed} ,
-      success: function(data) {
-        console.log("success");
-      }
-    });
 });
 
 $('.consent-box input').click(function(){
