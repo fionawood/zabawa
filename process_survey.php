@@ -24,7 +24,7 @@
 
 	if(!$mysqli->connect_errno)
 	{
-		echo $mysqli->query("INSERT INTO game (user,
+		$result = $mysqli->query("INSERT INTO game (user,
 										  views,
 										  game,
 										  incentive,
@@ -48,15 +48,8 @@
 								'$enjoy_similar',
 								'$replay,
 								'$incentive')");
-
-		echo 'id = '. $SESSION_ID;
-		echo ' views = '. $SESSION_VIEWS;
-		echo ' enjoy = '. $enjoy;
-		echo ' challenge = '. $challenge;
-		echo ' similar = '. $similar;
-		echo ' enjoy_similar = '. $enjoy_similar;
-		echo ' replay = '. $replay;
-		echo ' incentive = '. $incentive;
+		$mysqli->close();	
+		echo $result;
 	}
 
 ?>
