@@ -1,5 +1,7 @@
 var start;
 var elapsed;
+elapsed  = 2;
+$.post('process_survey.php', {time_elapsed: elapsed});
 
 $(".next").hide().delay(18000).fadeIn(8000, function() {
     start = new Date();
