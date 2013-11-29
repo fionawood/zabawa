@@ -13,7 +13,6 @@
 	$similar = $_POST['similar'];
 	$enjoy_similar = $_POST['enjoy-similar'];
 	$replay = $_POST['replay'];
-	var_dump(empty($_POST["incentive"]));
 
 	if(!empty($_POST["incentive"]))
 		$incentive = $_POST['incentive'];
@@ -23,7 +22,8 @@
 	$time = 0;
 
 	if(!$mysqli->connect_errno) {
-        $result = $mysqli->query("INSERT INTO game (id, visits, game, incentive)  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_mode', '$incentive_mode')");
+        $result = $mysqli->query("INSERT INTO game (id, visits, game, incentive, )  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_mode', '$incentive_mode')");
+        echo $_POST['elapsed'];
     }
 
 ?>
