@@ -1,12 +1,12 @@
 var start;
 var elapsed;
 elapsed  = 2;
-$.get("test.php",{ test:"help"});
 
 
 // $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
 $(".next").hide().delay(180).fadeIn(8000, function() {
     start = new Date();
+    $.get("test.php",{ test:"help"});
     console.log(start);
 });
 
