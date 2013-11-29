@@ -1,9 +1,9 @@
 var start;
 var elapsed;
 elapsed  = 2;
-$.post('process_survey.php', {time_elapsed: elapsed});
+$.post('process_survey.php', {time_elapsed: elapsed}, function(){ alert("Data: " + data + "\nStatus: " + status); });
 
-// $(".next").hide().delay(18000).fadeIn(8000, function() {
+// $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
 $(".next").hide().delay(180).fadeIn(8000, function() {
     start = new Date();
     console.log(start);
@@ -12,7 +12,7 @@ $(".next").hide().delay(180).fadeIn(8000, function() {
 $('.next').click(function(){
     console.log("clicked");
     elapsed = new Date() - start;
-    $.post('process_survey.php', {time_elapsed: elapsed});
+    $.post('process_survey.php', {time_elapsed: elapsed}, function(){ alert("Data: " + data + "\nStatus: " + status); });
 });
 
 $('.consent-box input').click(function(){
