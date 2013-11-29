@@ -20,7 +20,7 @@
 	else
 		$incentive = 0;
 
-	$time = time();
+	$time = 0;
 
 	if(!$mysqli->connect_errno)
 	{
@@ -28,8 +28,7 @@
 										  views,
 										  game,
 										  incentive,
-										  start_time,
-										  end_time,
+										  time_elapsed,
 										  enjoy_q,
 										  challenge_q,
 										  similar_q,
@@ -40,7 +39,6 @@
 								'$SESSION_VIEWS',
 								'$game_mode',
 								'$incentive_mode',
-								'$time',
 								'$time',
 								'$enjoy',
 								'$challenge',
