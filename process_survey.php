@@ -2,7 +2,7 @@
 	session_start();
 	include "config.php";
 
-	// $mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
+	$mysqli = new mysqli("$dbHost", "$dbUsername", "$dbPass", "$dbName");
 
 	$SESSION_ID = $_SESSION['id'];
 	$SESSION_VIEWS = $_SESSION['views'];
@@ -22,32 +22,12 @@
 
 	$time = 0;
 
-	if(!$mysqli->connect_errno)
-	{
-		$result = $mysqli->query("INSERT INTO user (user,
-										  views,
-										  game,
-										  incentive,
-										  time_elapsed,
-										  enjoy_q,
-										  challenge_q,
-										  similar_q,
-										  enjoy_similar_q,
-										  replay_q,
-										  incentive_q) 
-						VALUES ('$SESSION_ID',
-								'$SESSION_VIEWS',
-								'$game_mode',
-								'$incentive_mode',
-								'$time',
-								'$enjoy',
-								'$challenge',
-								'$similar',
-								'$enjoy_similar',
-								'$replay,
-								'$incentive')");
-		$mysqli->close();	
-		echo $result;
-	}
+	if(!$mysqli->connect_errno) {
+
+        $result = $mysqli->query("INSERT INTO game (user, views, game, incentive, time_elapsed, enjoy_q, challenge_q, similar_q, enjoy_similar_q,
+			replay_q, incentive_q)  VALUES ('$SESSION_ID', '$SESSION_VIEWS', '$game_mode', '$incentive_mode', '$time', '$enjoy', '$challenge', '$enjoy_similar', $replay', $incentive')");         
+        $mysqli->close();            
+        echo $result;     
+    }
 
 ?>
