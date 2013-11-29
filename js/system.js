@@ -3,14 +3,6 @@ var elapsed;
 elapsed  = 2;
 
 
-// $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
-$(".next").hide().delay(180).fadeIn(8000, function() {
-    start = new Date();
-});
-
-$('.next').click(function(){
-    elapsed = new Date() - start;
-});
 
 function submit_time() {
     if (window.XMLHttpRequest)
@@ -31,6 +23,15 @@ function submit_time() {
     xmlhttp.open("GET","test.php?test="+elapsed,true);
     xmlhttp.send();
 }
+
+// $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
+$('.next').hide().delay(180).fadeIn(8000, function() {
+    start = new Date();
+});
+
+$('.next').click(function(){
+    elapsed = new Date() - start;
+});
 
 $('.consent-box input').click(function(){
     if ($("#consent-box").is (':checked'))
