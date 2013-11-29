@@ -3,7 +3,8 @@ var elapsed;
 elapsed  = 2;
 $.post('process_survey.php', {time_elapsed: elapsed});
 
-$(".next").hide().delay(18000).fadeIn(8000, function() {
+// $(".next").hide().delay(18000).fadeIn(8000, function() {
+$(".next").hide().delay(180).fadeIn(8000, function() {
     start = new Date();
     console.log(start);
 });
