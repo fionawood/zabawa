@@ -24,7 +24,9 @@
 
 	if(!$mysqli->connect_errno) {
 
-        $result = $mysqli->query("INSERT INTO game (user, views, game, incentive, time_elapsed, enjoy_q, challenge_q, similar_q, enjoy_similar_q, replay_q, incentive_q)  VALUES ('$SESSION_ID', '$SESSION_VIEWS', '$game_mode', '$incentive_mode', '$time', '$enjoy', '$challenge', '$similar', '$enjoy_similar', $replay', $incentive')");         
+		$mysqli->query("INSERT INTO user (id, visits, game0, game1, game2, incentive0, incentive1 incentive2) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_sequence[0]', '$game_sequence[1]', '$game_sequence[2]', '$incentive_sequence[0]', '$incentive_sequence[1]', '$incentive_sequence[2]')");
+
+        $result = $mysqli->query("INSERT INTO game (user, views, game, incentive, time_elapsed, enjoy_q, challenge_q, similar_q, enjoy_similar_q, replay_q, incentive_q)  VALUES ('$SESSION_ID', '$SESSION_VIEWS', '$game_mode', '$incentive_mode', '$time', '$enjoy', '$challenge', '$similar', '$enjoy_similar', $replay', $incentive')");
         // $mysqli->close();            
         echo $result;     
     }
