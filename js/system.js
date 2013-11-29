@@ -1,8 +1,14 @@
 var start;
 var elapsed;
 elapsed  = 2;
-$.post('process_survey.php', {time_elapsed: elapsed}, function(){ alert("Data: " + data + "\nStatus: " + status); });
-
+$.ajax({
+  type: "POST",
+  url: "process_survey.php",
+  data: {time_elapsed:elapsed} ,
+  success: function(data) {
+    console.log("success");
+  }
+});
 // $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
 $(".next").hide().delay(180).fadeIn(8000, function() {
     start = new Date();
@@ -12,7 +18,14 @@ $(".next").hide().delay(180).fadeIn(8000, function() {
 $('.next').click(function(){
     console.log("clicked");
     elapsed = new Date() - start;
-    $.post('process_survey.php', {time_elapsed: elapsed}, function(){ alert("Data: " + data + "\nStatus: " + status); });
+    $.ajax({
+      type: "POST",
+      url: "process_survey.php",
+      data: {time_elapsed:elapsed} ,
+      success: function(data) {
+        console.log("success");
+      }
+    });
 });
 
 $('.consent-box input').click(function(){
