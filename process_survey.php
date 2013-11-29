@@ -24,7 +24,7 @@
 
 	if(!$mysqli->connect_errno)
 	{
-		$result = $mysqli->query("INSERT INTO game (user,
+		$result = $mysqli->query("INSERT INTO user (user,
 										  views,
 										  game,
 										  incentive,
