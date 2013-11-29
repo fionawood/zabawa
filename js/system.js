@@ -3,17 +3,14 @@ var elapsed;
 
 $(".next").hide().delay(18000).fadeIn(8000, function() {
     start = new Date();
+    console.log(start);
 });
 
 $('.next').click(function(){
     elapsed = new Date() - start;
-    $.ajax({
-       type:'POST',  //POST or GET depending if you want to use _GET or _POST in php
-       url:'survey.html', //Effectively the form action, where it goes to.
-       data:$('#elapsed').val(),  //The data to send to the page (Also look up form serialise)
-       success:function(e) {
-            // On success this will fire, depends on the return you will use in your page.
-       }
+    $.post('/process_survey.php', elapsed, function(response) {
+    // log the response to the console
+    console.log("Response: "+response); });
 });
 
 $('.consent-box input').click(function(){
