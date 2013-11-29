@@ -7,10 +7,9 @@ $(".next").hide().delay(18000).fadeIn(8000, function() {
 });
 
 $('.next').click(function(){
+    console.log("clicked");
     elapsed = new Date() - start;
-    $.post('/process_survey.php', elapsed, function(response) {
-    // log the response to the console
-    console.log("Response: "+response); });
+    $.post('process_survey.php', {time_elapsed: elapsed});
 });
 
 $('.consent-box input').click(function(){
