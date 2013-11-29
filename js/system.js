@@ -2,36 +2,19 @@ var start;
 var elapsed;
 elapsed  = 2;
 
-function createObject()
-{
-    var request_type;
-    var browser = navigator.appName;
-    if(browser == "Microsoft Internet Explorer")
-    {
-        request_type = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    else
-    {
-        request_type = new XMLHttpRequest();
-    }
-    return request_type;
-}
-var http = createObject();
 
 // $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
 $(".next").hide().delay(180).fadeIn(8000, function() {
     start = new Date();
-    nocache = Math.random();
-    http.open('GET', 'test.php?test='+"start"+'&nocache='+nocache,true);
-    // http.onreadystatechange = ;
-    http.send(null);
-    console.log(start);
 });
 
 $('.next').click(function(){
-    console.log("clicked");
     elapsed = new Date() - start;
 });
+
+function submit_time() {
+    console.log("here we go");
+}
 
 $('.consent-box input').click(function(){
     if ($("#consent-box").is (':checked'))
