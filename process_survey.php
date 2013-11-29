@@ -24,8 +24,9 @@
 	$time = 0;
 
 	if(!$mysqli->connect_errno) {
-        $result = $mysqli->query("INSERT INTO game (id, visits, game, incentive, )  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_mode', '$incentive_mode')");
-        echo $elapsed;
+        $result = $mysqli->query("INSERT INTO game (id, visits, game, incentive, time_elapsed)  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_mode', '$incentive_mode', '$elapsed')");
+        echo "elapsed = ".$elapsed;
+
     }
 
 ?>
