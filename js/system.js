@@ -17,7 +17,7 @@ function submit_time() {
       {
       if (xmlhttp.readyState==4 && xmlhttp.status==200)
         {
-        document.getElementById("container").innerHTML=xmlhttp.responseText;
+        document.getElementById("testing").innerHTML=xmlhttp.responseText;
         }
       }
     xmlhttp.open("GET","test.php?test="+elapsed,true);
