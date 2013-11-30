@@ -7,4 +7,5 @@
 <script>
 	var game_mode = "<?php echo $game_mode; ?>";
 	var incentive_mode = "<?php echo $incentive_mode; ?>";
+	var testing123 = 2;
 </script>
