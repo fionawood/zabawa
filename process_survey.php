@@ -32,6 +32,6 @@
     	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
 		$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
     }
-	header("Location: ". $game_mode. "php"); 
+	header("Location: ". $game_mode. ".php"); 
 
 ?>
