@@ -1,4 +1,6 @@
-
+<?php 
+    session_start()
+?>
 
 <html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -23,8 +25,11 @@
 
     </head>
 
-    <body>
-    <div class = "container">
+    <body>    
+    <p class = "large-text centered"> Find the nouns. </div>
+
+    <div class = "container">    
+
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -32,30 +37,28 @@
 
         <!-- Add your site or application content here -->
 
-        <section class = "console">
+        <section class = "console">   
 
         <div id = "console-container">
 
-            <div id = "output">
-            <p> Welcome to the text-adventure portion of this study! </p>
-            <p> You may interact with the story by typing into the console. Actions are generally self-explanatory and included in the text of each prompt. </p>
-            <br/> <br/>
-            <p> You are in a cramped box. You barely fit inside. </p>
-            </div>
-
-            <div id = "input-form">
+            
+            <canvas id="myCanvas" width="600" height="400" style="position: relative; top: -15px; left: -15px;"></canvas>
+            <div id = "input-form" style="position: relative; top: -60px;">
                 <form>
-                <input type="text" autofocus="autofocus"> <input type="submit" value="Do it!"/>
+                <input type="text" autofocus="autofocus"> <input type="submit" value="Found it!"/>
                 </form> 
             </div>
 
         </div>
+
+
 
         </section>
 
         <section class = "incentives">
 
         <div id ="badges">
+
             <ul>
 
             </ul>
@@ -84,7 +87,6 @@
 
         <p class = "large-text centered"> <a href="#" id="nextbtn"> Next &#9654; </a> </p>
 
-
         </section>
     </div> <!-- end container div -->  
 
@@ -92,9 +94,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
-    <script src="js/incentives.js"></script>
-    <script src="js/text-adventure.js"></script>
     <script src="js/system.js"></script>
+    <script src="js/incentives.js"></script>
+    <script src="js/word-bounce.js"></script>
 
     </body>
 </html>
