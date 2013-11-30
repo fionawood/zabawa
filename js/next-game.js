@@ -2,7 +2,7 @@ function makeURL(page) {
   var x = "http://zabawa.cs179.org/";
   //var x = "file://localhost/Users/fionawwood/Documents/zabawa/";
   x=x.concat(page);
-  x=x.concat(".html");
+  x=x.concat(".php");
   return x;
 }
 
