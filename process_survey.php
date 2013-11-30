@@ -28,7 +28,7 @@
 
 
 
-	echo "mode =". $p;
+	echo "mode =". $game_mode;
 
 
 	if(!$mysqli->connect_errno) {
