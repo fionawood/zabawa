@@ -20,7 +20,7 @@
 
 	$elapsed = $_SESSION['time_elapsed'];
 
-	echo $enjoy;
+	echo $elapsed;
 
 
 	if(!$mysqli->connect_errno) {
