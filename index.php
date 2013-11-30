@@ -75,6 +75,7 @@
     <script src="js/incentives.js"></script>
     <script src="js/consent-setup.js"></script>
     <?php include 'controller.php'; ?>
+    <?php include 'load_modes.php'; ?>
     <script src="js/setup.js"></script>
 
 
