@@ -19,5 +19,6 @@
     // $result = $mysqli->query("UPDATE game SET time_elapsed='$t' WHERE id='$SESSION_ID' AND visits='$SESSION_VISITS' AND game='$game_mode')");
 
     //$result = $mysqli->query("INSERT INTO game (id, visits, time_elapsed)  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed')");
+	//header("Location: survey.php"); 
 
 ?>
