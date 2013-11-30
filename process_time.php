@@ -7,8 +7,10 @@
 
 
     $t =  $_GET['elapsed'];
+    
     $SESSION_ID = $_SESSION['id'];
     $SESSION_VISITS = $_SESSION['visits'];
+    $_SESSION['time_elapsed'] = $t;
 	// $game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
 	// $incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
 
