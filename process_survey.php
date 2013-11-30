@@ -20,12 +20,9 @@
 
 	$elapsed = $_SESSION['time_elapsed'];
 
-	echo $elapsed;
-
 
 	if(!$mysqli->connect_errno) {
 		$result=$mysqli->query("INSERT INTO game (id, visits, time_elapsed) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed')");
-		echo $result;
     }
 
 
