@@ -24,6 +24,8 @@
 
 	echo "enjoy = ". $enjoy;
 
+	echo "mode =". $game_mode;
+
 
 	if(!$mysqli->connect_errno) {
 		$result=$mysqli->query("INSERT INTO game (id, visits, time_elapsed, enjoy_q) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed', '$enjoy')");
