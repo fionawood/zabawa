@@ -20,9 +20,13 @@
 
 	$elapsed = $_SESSION['time_elapsed'];
 
+	echo "t =". $elapsed;
+
+	echo "enjoy = ". $enjoy;
+
 
 	if(!$mysqli->connect_errno) {
-		$result=$mysqli->query("INSERT INTO game (id, visits, time_elapsed) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed')");
+		$result=$mysqli->query("INSERT INTO game (id, visits, game, time_elapsed) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_mode', $elapsed')");
     }
 
     $_SESSION['pair'] = $_SESSION['pair']+1;
