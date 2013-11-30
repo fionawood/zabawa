@@ -30,10 +30,10 @@ $('.next').hide().delay(180).fadeIn(8000, function() {
     start = new Date();
 });
 
-$('.next').click(function(){
-    elapsed = new Date() - start;
-    submit_time();
-});
+// $('.next').click(function(){
+//     elapsed = new Date() - start;
+//     submit_time();
+// });
 
 $(function() {
 if (incentive_mode !== "none") {
