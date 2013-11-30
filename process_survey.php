@@ -24,7 +24,7 @@
 
 
 	if(!$mysqli->connect_errno) {
-		$mysqli->query("INSERT INTO game (id, visits, enjoy_q) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$enjoy')");
+		$mysqli->query("INSERT INTO game (id, visits, time_elapsed) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed')");
     }
 
 ?>
