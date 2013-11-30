@@ -20,6 +20,7 @@ function submit_time() {
         document.getElementById("testing").innerHTML=xmlhttp.responseText;
       }
     }
+    elapsed = new Date() - start;
     xmlhttp.open("GET","test.php?test="+elapsed,true);
     xmlhttp.send();
 }
@@ -31,18 +32,8 @@ $('.next').hide().delay(180).fadeIn(8000, function() {
 
 $('.next').click(function(){
     elapsed = new Date() - start;
+    submit_time();
 });
-
-$('.consent-box input').click(function(){
-    if ($("#consent-box").is (':checked'))
-    {
-        $("#start-button").fadeIn(300);
-    }
-    else {
-		$("#start-button").fadeOut(300);
-    }
-});
-
 
 $(function() {
 if (incentive_mode !== "none") {
