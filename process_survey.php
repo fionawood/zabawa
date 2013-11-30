@@ -24,8 +24,10 @@
 	$time = 0;
 
 	if(!$mysqli->connect_errno) {
-        $result = $mysqli->query("UPDATE game SET enjoy_q='$enjoy' WHERE id='$SESSION_ID' AND visits='$SESSION_VISITS' AND 'game'=$game_mode')");
-        echo "elapsed = ".$elapsed;
+		$result = $mysqli->query("INSERT INTO game (id, visits, enjoy_q)  VALUES ('$SESSION_ID', '$SESSION_VISITS', $enjoy')");
+
+        // $result = $mysqli->query("UPDATE game SET enjoy_q='$enjoy' WHERE id='$SESSION_ID' AND visits='$SESSION_VISITS' AND 'game'=$game_mode')");
+        // echo "elapsed = ".$elapsed;
 
     }
 
