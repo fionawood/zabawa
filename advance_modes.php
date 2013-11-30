@@ -7,10 +7,12 @@
 		$game_mode = 'debrief';
 		$incentive_mode = 'none';
 	}
+	$_SESSION['pair'] = $_SESSION['pair'] + 1;
 
 ?>
 
 <script>
 	var game_mode = "<?php echo $game_mode; ?>";
 	var incentive_mode = "<?php echo $incentive_mode; ?>";
+	var testing123 = 2;
 </script>
