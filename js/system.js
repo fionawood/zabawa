@@ -26,11 +26,11 @@ $('#testing').click(function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200)
       {
         //document.getElementById("testing").innerHTML=xmlhttp.responseText;
-        window.location.href = "survey.php";
+        window.location.href = "survey.html";
       }
     }
     elapsed = new Date() - start;
-    xmlhttp.open("GET","survey.php?elapsed="+elapsed,true);
+    xmlhttp.open("GET","process_time.php?elapsed="+elapsed,true);
     xmlhttp.send();
     return false;
 });
