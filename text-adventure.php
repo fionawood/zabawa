@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php 
+    session_start()
+?>
+
+<html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -17,14 +21,12 @@
         <![endif]-->
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <?php include 'load_modes.php'; ?>
 
     </head>
 
-    <body>    
-    <p class = "large-text centered"> Find the nouns. </div>
-
-    <div class = "container">    
-
+    <body>
+    <div class = "container">
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -32,28 +34,30 @@
 
         <!-- Add your site or application content here -->
 
-        <section class = "console">   
+        <section class = "console">
 
         <div id = "console-container">
 
-            
-            <canvas id="myCanvas" width="600" height="400" style="position: relative; top: -15px; left: -15px;"></canvas>
-            <div id = "input-form" style="position: relative; top: -60px;">
+            <div id = "output">
+            <p> Welcome to the text-adventure portion of this study! </p>
+            <p> You may interact with the story by typing into the console. Actions are generally self-explanatory and included in the text of each prompt. </p>
+            <br/> <br/>
+            <p> You are in a cramped box. You barely fit inside. </p>
+            </div>
+
+            <div id = "input-form">
                 <form>
-                <input type="text" autofocus="autofocus"> <input type="submit" value="Found it!"/>
+                <input type="text" autofocus="autofocus"> <input type="submit" value="Do it!"/>
                 </form> 
             </div>
 
         </div>
-
-
 
         </section>
 
         <section class = "incentives">
 
         <div id ="badges">
-
             <ul>
 
             </ul>
@@ -82,6 +86,7 @@
 
         <p class = "large-text centered"> <a href="#" id="nextbtn"> Next &#9654; </a> </p>
 
+
         </section>
     </div> <!-- end container div -->  
 
@@ -89,9 +94,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
-    <script src="js/system.js"></script>
     <script src="js/incentives.js"></script>
-    <script src="js/word-bounce.js"></script>
+    <script src="js/text-adventure.js"></script>
+    <script src="js/system.js"></script>
 
     </body>
 </html>
