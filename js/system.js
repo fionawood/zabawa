@@ -12,7 +12,7 @@ $('.next').hide().delay(180).fadeIn(8000, function() {
     start = new Date();
 });
 
-$('#testing').click(function(){
+$('#nextbtn').click(function(){
     if (window.XMLHttpRequest)
     {// code for IE7+, Firefox, Chrome, Opera, Safari
       xmlhttp=new XMLHttpRequest();
