@@ -113,6 +113,7 @@
     <!--<script src="js/main.js"></script>-->
     <script src="js/system.js"></script>
     <script src="js/incentives.js"></script>
+    <?php include 'load_modes.php'; ?>
     <script src="js/next-game.js"></script>
     </body>
 </html>
