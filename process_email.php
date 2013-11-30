@@ -8,6 +8,7 @@
 
     $email =  $_POST['email'];
 
-    echo $email;
+    $result=$mysqli->query("INSERT INTO emails (email) VALUES ('$email')");
+
 
 ?>
