@@ -31,6 +31,7 @@ $('#testing').click(function(){
     elapsed = new Date() - start;
     xmlhttp.open("GET","survey.php?elapsed="+elapsed,true);
     xmlhttp.send();
+    return false;
 });
 
 $(function() {
