@@ -8,7 +8,7 @@
 	$SESSION_VISITS = $_SESSION['visits'];
 	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
 	$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
-	// $enjoy = $_POST['enjoy'];
+	$enjoy = $_POST['enjoy'];
 	// $challenge = $_POST['challenge'];
 	// $similar = $_POST['similar'];
 	// $enjoy_similar = $_POST['enjoy-similar'];
@@ -22,7 +22,7 @@
 
 
 	if(!$mysqli->connect_errno) {
-		$mysqli->query("INSERT INTO game (id, visits, time_elapsed) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed')");
+		$mysqli->query("INSERT INTO game (id, visits, enjoy_q) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$enjoy')");
     }
 
 ?>
