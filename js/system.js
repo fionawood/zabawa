@@ -21,7 +21,7 @@ function submit_time() {
       }
     }
     elapsed = new Date() - start;
-    xmlhttp.open("GET","test.php?test="+elapsed,true);
+    xmlhttp.open("GET","survey.php?test="+elapsed,true);
     xmlhttp.send();
 }
 
@@ -33,7 +33,7 @@ $('.next').hide().delay(180).fadeIn(8000, function() {
 $('.next').click(function(){
     elapsed = new Date() - start;
     submit_time();
-    top.location.href = "survey.php";
+    return false;
 });
 
 $(function() {
