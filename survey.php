@@ -94,14 +94,14 @@
                 <input type="radio" id="incentive-4" value="4" name="incentive"/><label for="incentive-4">a bit</label>
                 <input type="radio" id="incentive-5" value="5" name="incentive"/><label for="incentive-5">liked it a lot</label></p>
             </div>
-            <input type="submit">
+            <input type="submit" value="Proceed to the next question">
             </form>
 
 
         </section>
        
-        <p id = "start-button" class = "very-large-text centered"> <a href="#" onclick="main_questions.submit(); "> Proceed to the next game! &#9654; </a> </p>
-        </section>
+        <!-- <p id = "start-button" class = "very-large-text centered"> <a href="#" onclick="main_questions.submit(); "> Proceed to the next game! &#9654; </a> </p>
+         --></section>
 
 
 

@@ -45,8 +45,10 @@
 
         <p > If you would like to be notified of the results of this study, please enter your e-mail:
 
-        <input type="email" pattern="[^ @]*@[^ @]*" value="">
+        <form id="debrief-form" action="process_email.php" method="post">
+        <input type="email" pattern="[^ @]*@[^ @]*" value="" name = "email">
         <input type="submit" value="Submit"/>
+        </form>
 
         </p>
 
