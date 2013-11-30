@@ -99,7 +99,7 @@
 
         </section>
        
-        <p id = "start-button" class = "very-large-text centered"> <a href="process_survey.php" onclick="main_questions.submit(); "> Proceed to the next game! &#9654; </a> </p>
+        <p id = "start-button" class = "very-large-text centered"> <a href="#" onclick="main_questions.submit(); "> Proceed to the next game! &#9654; </a> </p>
         </section>
 
 
