@@ -12,7 +12,7 @@
 	// $game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
 	// $incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
 
-    $result = $mysqli->query("UPDATE game SET time_elapsed='$t' WHERE id='$SESSION_ID')");
+    // $result = $mysqli->query("UPDATE game SET time_elapsed='$t' WHERE id='$SESSION_ID')");
 
     // $result = $mysqli->query("UPDATE game SET time_elapsed='$t' WHERE id='$SESSION_ID' AND visits='$SESSION_VISITS' AND game='$game_mode')");
 
