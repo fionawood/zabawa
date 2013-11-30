@@ -7,5 +7,5 @@ function makeURL(page) {
   return x;
 }
 
-var firstGame = document.getElementById("firstGame");
+var firstGame = document.getElementById("oops");
 firstGame.href = makeURL(game_mode);
