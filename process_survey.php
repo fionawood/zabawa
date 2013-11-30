@@ -28,4 +28,7 @@
 		echo $result;
     }
 
+
+	header("Location: debrief.php"); 
+
 ?>
