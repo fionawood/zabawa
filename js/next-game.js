@@ -6,8 +6,6 @@ function makeURL(page) {
   return x;
 }
 
-game_mode = "<?php echo(json_encode($game_mode));?>"
-incentive_mode = "<?php echo(json_encode($game_mode));?>"
 console.log(game_mode);
 var nextGame = document.getElementById("nextGame");
 nextGame.href = makeURL(game_mode);
