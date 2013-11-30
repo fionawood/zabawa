@@ -7,7 +7,7 @@
 
 
     $t =  $_GET['elapsed'];
-    
+
     $SESSION_ID = $_SESSION['id'];
     $SESSION_VISITS = $_SESSION['visits'];
     $_SESSION['time_elapsed'] = $t;
@@ -18,6 +18,6 @@
 
     // $result = $mysqli->query("UPDATE game SET time_elapsed='$t' WHERE id='$SESSION_ID' AND visits='$SESSION_VISITS' AND game='$game_mode')");
 
-    // $result = $mysqli->query("INSERT INTO game (id, visits, game, incentive, time_elapsed)  VALUES ('$SESSION_ID', '$SESSION_VISITS', $game_mode, $incentive_mode, '$t')");
+    $result = $mysqli->query("INSERT INTO game (id, visits, time_elapsed)  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$t')");
 
 ?>
