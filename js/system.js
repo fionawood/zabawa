@@ -30,8 +30,7 @@ $('.next').hide().delay(180).fadeIn(8000, function() {
     start = new Date();
 });
 
-$('.next').click(function(){
-    e.preventDefault();
+$('testing').click(function(){
 
     elapsed = new Date() - start;
     submit_time();
