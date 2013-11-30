@@ -1,5 +1,4 @@
 <?
-
     session_start();
     include "config.php";
 
@@ -10,6 +9,4 @@
 
     $result=$mysqli->query("INSERT INTO emails (email) VALUES ('$email')");
     header("Location: final.html"); 
-
-
 ?>
