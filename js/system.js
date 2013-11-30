@@ -35,7 +35,6 @@ if (incentive_mode !== "none") {
     $("#incentive-questions").html("How much did you like the presence of <strong>" + incentive_mode + "</strong> in the game?");
 }
 
-
 $('input[type=radio]').change(function(){
     var names = {};
     $('input:radio').each(function() { // find unique names

@@ -30,8 +30,3 @@
 
 	$mysqli->close();
 ?>
-
-<script>
-	var game_mode = "<?php echo $_SESSION['game_sequence'][$_SESSION['pair']]; ?>";
-	var incentive_mode = "<?php echo $_SESSION['incentive_sequence'][$_SESSION['pair']]; ?>";
-</script>
