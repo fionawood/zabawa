@@ -24,7 +24,11 @@
 
 	echo "enjoy = ". $enjoy;
 
-	echo "mode =". $game_mode;
+	$p = $_SESSION['pair'];
+
+
+
+	echo "mode =". $p;
 
 
 	if(!$mysqli->connect_errno) {
