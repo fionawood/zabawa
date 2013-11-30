@@ -28,5 +28,6 @@
 
 	$mysqli->query("INSERT INTO user (id, visits, game0, game1, game2, incentive0, incentive1,incentive2) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_sequence[0]', '$game_sequence[1]', '$game_sequence[2]', '$incentive_sequence[0]', '$incentive_sequence[1]', '$incentive_sequence[2]')");
 
+    $mysqli->query("INSERT INTO game (id, visits, game, incentive)  VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_sequence[0]', '$incentive_sequence[0]')");
 	$mysqli->close();
 ?>
