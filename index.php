@@ -73,7 +73,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/incentives.js"></script>
-    <script src="js/system.js"></script>
+    <script src="js/consent-setup.js"></script>
     <?php include 'controller.php'; ?>
     <script src="js/setup.js"></script>
 
