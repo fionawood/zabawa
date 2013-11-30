@@ -25,7 +25,8 @@ $('#testing').click(function(){
     {
       if (xmlhttp.readyState==4 && xmlhttp.status==200)
       {
-        document.getElementById("testing").innerHTML=xmlhttp.responseText;
+        //document.getElementById("testing").innerHTML=xmlhttp.responseText;
+        window.location.href = "survey.php";
       }
     }
     elapsed = new Date() - start;
