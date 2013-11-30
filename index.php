@@ -61,7 +61,7 @@
             <input type ="checkbox" value = "consent" id="consent-box" class="regular-checkbox big-checkbox"> <label for="consent-box"></label>
         </div>
 
-        <p id = "start-button" class = "very-large-text centered"> <a href="final.html" id="oops"> Let the games begin! &#9654; </a> </p>
+        <p id = "start-button" class = "very-large-text centered"> <a href="#" id="firstGame"> Let the games begin! &#9654; </a> </p>
         </section>
 
 
