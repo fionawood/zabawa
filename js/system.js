@@ -5,6 +5,14 @@ elapsed  = 2;
 
 
 function submit_time() {
+}
+
+// $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
+$('.next').hide().delay(180).fadeIn(8000, function() {
+    start = new Date();
+});
+
+$('#testing').click(function(){
     if (window.XMLHttpRequest)
     {// code for IE7+, Firefox, Chrome, Opera, Safari
       xmlhttp=new XMLHttpRequest();
@@ -23,19 +31,6 @@ function submit_time() {
     elapsed = new Date() - start;
     xmlhttp.open("GET","survey.php?elapsed="+elapsed,true);
     xmlhttp.send();
-}
-
-// $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
-$('.next').hide().delay(180).fadeIn(8000, function() {
-    start = new Date();
-});
-
-$('#testing').click(function(){
-
-    elapsed = new Date() - start;
-    submit_time();
-
-    window.location.href = "survey.php?elapsed=3";
 });
 
 $(function() {
