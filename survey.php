@@ -94,6 +94,8 @@
                 <input type="radio" id="incentive-4" value="4" name="incentive"/><label for="incentive-4">a bit</label>
                 <input type="radio" id="incentive-5" value="5" name="incentive"/><label for="incentive-5">liked it a lot</label></p>
             </div>
+
+            <p><input type="submit" /></p>
             </form>
 
 
