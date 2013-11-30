@@ -14,7 +14,7 @@
 	$enjoy_similar = $_POST['enjoy-similar'];
 	$replay = $_POST['replay'];
 
-	$elapsed = $_POST['time_elapsed'];
+	$elapsed = $_SESSION['time_elapsed'];
 
 	if(!empty($_POST["incentive"]))
 		$incentive = $_POST['incentive'];
