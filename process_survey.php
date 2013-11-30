@@ -9,14 +9,14 @@
 	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
 	$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
 	$enjoy = $_POST['enjoy'];
-	// $challenge = $_POST['challenge'];
-	// $similar = $_POST['similar'];
-	// $enjoy_similar = $_POST['enjoy-similar'];
-	// $replay = $_POST['replay'];
-	// if(!empty($_POST["incentive"]))
-	// 	$incentive = $_POST['incentive'];
-	// else
-	// 	$incentive = 0;
+	$challenge = $_POST['challenge'];
+	$similar = $_POST['similar'];
+	$enjoy_similar = $_POST['enjoy-similar'];
+	$replay = $_POST['replay'];
+	if(!empty($_POST["incentive"]))
+		$incentive = $_POST['incentive'];
+	else
+		$incentive = 0;
 
 	$elapsed = $_SESSION['time_elapsed'];
 
