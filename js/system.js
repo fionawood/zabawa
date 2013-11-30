@@ -33,7 +33,7 @@ $('.next').hide().delay(180).fadeIn(8000, function() {
 $('.next').click(function(){
     elapsed = new Date() - start;
     submit_time();
-    window.location.href = "survey.php"
+    window.location.href = "test.php"
 });
 
 $(function() {
