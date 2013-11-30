@@ -25,7 +25,13 @@
 		$result=$mysqli->query("INSERT INTO game (id, visits, time_elapsed) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed')");
     }
 
-
-	header("Location: debrief.php"); 
+    $_SESSION['pair'] = $_SESSION['pair']+1;
+    if($_SESSION['pair']>2) {
+    	$game_mode='debrief';
+    } else {
+    	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
+		$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
+    }
+	header("Location: ". $game_mode. "php"); 
 
 ?>
