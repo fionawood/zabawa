@@ -32,7 +32,7 @@
 
 
 	if(!$mysqli->connect_errno) {
-		$result=$mysqli->query("INSERT INTO game (id, visits, time_elapsed, enjoy_q) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$elapsed', '$enjoy')");
+		$result=$mysqli->query("INSERT INTO game (id, visits, game, incentive, time_elapsed, enjoy_q) VALUES ('$SESSION_ID', '$SESSION_VISITS', '$game_mode', '$incentive_mode', $elapsed', '$enjoy')");
     }
 
     $_SESSION['pair'] = $_SESSION['pair']+1;
