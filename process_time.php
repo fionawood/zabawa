@@ -9,8 +9,8 @@
     $t =  $_GET['elapsed'];
     $SESSION_ID = $_SESSION['id'];
     $SESSION_VISITS = $_SESSION['visits'];
-	$game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
-	$incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
+	// $game_mode = $_SESSION['game_sequence'][$_SESSION['pair']];
+	// $incentive_mode = $_SESSION['incentive_sequence'][$_SESSION['pair']];
 
     $result = $mysqli->query("UPDATE game SET time_elapsed='$t' WHERE id='$SESSION_ID')");
 
