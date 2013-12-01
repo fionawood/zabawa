@@ -5,6 +5,7 @@ var x=200;
 var y=200;
 var r=100;
 var scrambled = new Array();
+var found = new Array();
 
 var ws = words;
 
@@ -43,7 +44,10 @@ function draw(c){
 
     context.font="30px Arial";
 
-    context.fillStyle="#000000";
+    if(found.indexOf(scrambled[c])>=0)
+        context.fillStyle="#100000";
+    else
+        context.fillStyle="#000000";
     context.fillText(scrambled[c],x,y+10);
     if( x<r+5 || x>myCanvas.width-r-5) dx=-dx;
     if( y<r+5 || y>myCanvas.height-r-65) dy=-dy;
@@ -63,21 +67,26 @@ $("#input-form").submit(function( event ) {
     process_input(user_input);
 });
 
+
+var num_found = 0;
+
 var process_input = function(cmd_text) {
     var regex = new RegExp((ws[current]), "gi");
     if (cmd_text.match(regex) !== null) {
         cmd_text="";
         dx*=1+Math.random()*.1;
         dy*=1+Math.random()*.1;
+        found[num_found] = ws[current];
+        num_found++;
 
         if (incentive_mode == "badges") {
             assign_badge_word(ws[current]);
         }
         else if (incentive_mode == "leaders") {
-            assign_leader(current_stage.incentive);
+            assign_leader_word(ws[current]);
         }
         else if (incentive_mode == "badges") {
-            assign_level(current_stage.incentive);
+            assign_level_word(ws[current]);
         }
         ws.splice(current,1);
         scrambled.splice(current,1);
