@@ -85,10 +85,10 @@ var process_input = function(cmd_text) {
                assign_badge_word(nouns[i]);
             }
             else if (incentive_mode == "leaders") {
-                assign_leader(current_stage.incentive);
+                assign_leader_word(nouns[i]);
             }
-            else if (incentive_mode == "badges") {
-                assign_level(current_stage.incentive);
+            else if (incentive_mode == "levels") {
+                assign_level_word(nouns[i]);
             }
         }
     }
