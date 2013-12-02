@@ -5,7 +5,6 @@ var x=200;
 var y=200;
 var r=100;
 var scrambled = new Array();
-var found = new Array();
 
 var ws = words;
 
@@ -44,10 +43,7 @@ function draw(c){
 
     context.font="30px Arial";
 
-    if(found.indexOf(scrambled[c])>=0)
-        context.fillStyle="#100000";
-    else
-        context.fillStyle="#000000";
+    context.fillStyle="#000000";
     context.fillText(scrambled[c],x,y+10);
     if( x<r+5 || x>myCanvas.width-r-5) dx=-dx;
     if( y<r+5 || y>myCanvas.height-r-65) dy=-dy;
@@ -76,7 +72,6 @@ var process_input = function(cmd_text) {
         cmd_text="";
         dx*=1+Math.random()*.1;
         dy*=1+Math.random()*.1;
-        found[num_found] = ws[current];
         num_found++;
 
         if (incentive_mode == "badges") {
