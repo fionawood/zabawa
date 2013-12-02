@@ -52,7 +52,7 @@ function draw(i){
 
     context.font="25px Arial";
 
-    if(found.indexOf(scrambled[c])>=0)
+    if(found.indexOf(ws[i])>=0)
         context.fillStyle="#100000";
     else
         context.fillStyle="#000000";
