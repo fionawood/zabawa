@@ -1,10 +1,12 @@
 // incentive mode switch - options are "badges", "leaders", "levels", and "none"
 //incentive_mode = "badges";
 
-var words=["bug","ant","hill","box","brain","human","climb","pinhole","grass","guts","hungry","rat","leg","man","look","sky","outside","consume","glance","eat"];
-var nouns=["bug","ant","hill","box","brain","human","climb","pinhole","grass","guts","rat","leg","man","sky","outside"];
-
+var words=["sneeze","bug","ant","hill","box","brain","human","climb","pinhole","grass","guts","hunger","rat","leg","man","look","sky","outside","consume","glance","eat"];
+var nouns=["sneeze","bug","ant","hill","box","brain","human","climb","pinhole","grass","guts","rat","leg","man","sky","outside","hunger"];
+var noun_badges = ["bug","ant","box","brain","grass","guts","four","five","seven"];
 // badge logic
+
+var largest_word=0;
 
 var adventure_badges = {
     1: {
@@ -66,6 +68,18 @@ var leader_percent = {
     9: "84%",
 };
 
+var level_name = {
+    1: "Escapee",
+    2: "Explorer",
+    3: "Invader",
+    4: "World Domination",
+    5: "Global Superpower",
+    6: "Dictator of the Solar System",
+    7: "Galactic Despot",
+    8: "King of the Universe",
+    9: "Emperor of Everything",
+};
+
 var assign_badge = function(badge_id) {
     badge = adventure_badges[badge_id];
     $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + badge.name + "</h2> <br/>" + badge.image + "<br/> <p>" + badge.description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
@@ -79,59 +93,44 @@ var assign_leader = function(leader_id) {
 };
 
 var assign_level = function(level_id) {
-    //level stuff here
+    lname = level_name[level_id];
+    $(".level-modal").html("<p> You've achieved the <br/><strong class ='dark large-text'>" + lname + "</strong><br/> level! </p>").hide().fadeIn(300).delay(800).fadeOut(1000);
+    $(".incentives #levels").html("<h1> You've achieved the <strong class ='dark'>" + lname + " </strong> level! </h1>");
+};
+
+var assign_leader_word = function(num_found) {
+    if(num_found%2 == 0) assign_leader(num_found/2);
+};
+
+var assign_level_word = function(level_id) {
+    if(num_found%2 == 0) assign_leader(num_found/2);
 };
 
 var assign_badge_word = function(word) {
     w = word;
-    img = '<img src=\'img/'
-    img=img.concat(w.concat('.svg\'width=40 height=40>'));
-    description = w.concat(' found');
-    $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
-    $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
-};
-
-
-// social comparison logic
-
-// var random_interval = function (range, floor) {
-//     random_number = Math.floor((Math.random()*range)+floor);
-//     return random_number;
-// };
-
-
-// if (incentive_mode == "leaders") {
-
-//     var progress = 98;
-//     var prev_percent = 1;
-
-//     $(".incentives #leaders").html("<h1> You're currently better than <strong class ='dark'>0%</strong> of other players! </h1>");
-
-//     setInterval(function() {
-
-//         var percentage = random_interval(100-progress, prev_percent);
-//         $(".incentives #leaders").html("<h1> You're currently better than <strong class ='dark'>" + percentage + "% </strong> of other players! </h1>");
-//         prog_check = (progress <= 5) ? progress = 5 : progress = progress -3;
-//         prev_percent = percentage;
-//         }, 20000);
-//     };
-
-   
-// };
-
-var level_details = {
-        1: {
-            name: "Wordsmith",
-            image: "<img src='http://placehold.it/70x70'>",
-        },
-};
-
-if(incentive_mode == "levels") {
-    var level=0;
-
-    var next_level = function() {
-        level++;
-        l = level_details[level];
-        $(".incentives #levels").html("<h1> You've advanced to <strong class ='dark'> Level " + l.name + " </strong>! </h1>");
+    if(noun_badges.indexOf(word)>=0) {
+        img = '<img src=\'img/'
+        img=img.concat(w.concat('.svg\'width=40 height=40>'));
+        description = w.concat(' found');
+        $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
+        $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
+    } else if(word.length() > largest_word) {
+        largest_word = word.length();
+        if(word.length()==4) {
+            img = '<img src=\'img/four.svg\' width=40 height=40>'));
+            description = 'Four letters!';
+            $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
+            $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
+        } else if(word.length()==5) {
+            img = '<img src=\'img/five.svg\' width=40 height=40>'));
+            description = 'Five letters!';
+            $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
+            $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
+        } else if((word.length()==7) {
+            img = '<img src=\'img/seven.svg\' width=40 height=40>'));
+            description = 'Seven letters!';
+            $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
+            $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");)
+        }
     }
 };
