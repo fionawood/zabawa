@@ -26,7 +26,7 @@
     </head>
 
     <body>    
-    <p class = "large-text centered"> Find the nouns. </div>
+    <p class = "large-text centered"> Find the nouns. Some nouns are worth special points! </div>
 
     <div class = "container">    
 
