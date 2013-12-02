@@ -130,7 +130,7 @@ var assign_badge_word = function(word) {
             img = '<img src=\'img/seven.svg\' width=40 height=40>';
             description = 'Seven letters!';
             $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
-            $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");)
+            $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
         }
     }
 };
