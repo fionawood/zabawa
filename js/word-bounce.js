@@ -84,8 +84,8 @@ var process_input = function(cmd_text) {
         var regex = new RegExp((nouns[i]), "gi");
         if (cmd_text.match(regex) !== null) {
             cmd_text="";
-            if(found.indexOf(ws[current])<0) {
-                found[num_found] = ws[current];
+            if(found.indexOf(nouns[i])<0) {
+                found[num_found] = nouns[i];
                 num_found++;
 
                 if (incentive_mode == "badges") {
