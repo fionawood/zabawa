@@ -110,24 +110,24 @@ var assign_badge_word = function(word) {
     w = word;
     if(noun_badges.indexOf(word)>=0) {
         img = '<img src=\'img/'
-        img=img.concat(w.concat('.svg\'width=40 height=40>'));
+        img=img.concat(w.concat('.svg\'width=40 height=40>';
         description = w.concat(' found');
         $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
         $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
     } else if(word.length() > largest_word) {
         largest_word = word.length();
         if(word.length()==4) {
-            img = '<img src=\'img/four.svg\' width=40 height=40>'));
+            img = '<img src=\'img/four.svg\' width=40 height=40>';
             description = 'Four letters!';
             $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
             $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
         } else if(word.length()==5) {
-            img = '<img src=\'img/five.svg\' width=40 height=40>'));
+            img = '<img src=\'img/five.svg\' width=40 height=40>';
             description = 'Five letters!';
             $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
             $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
         } else if((word.length()==7) {
-            img = '<img src=\'img/seven.svg\' width=40 height=40>'));
+            img = '<img src=\'img/seven.svg\' width=40 height=40>';
             description = 'Seven letters!';
             $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
             $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");)
