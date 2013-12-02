@@ -99,18 +99,18 @@ var assign_level = function(level_id) {
 };
 
 var assign_leader_word = function(num_found) {
-    if(num_found%2 == 0) assign_leader(num_found/2);
+    if((num_found%2 == 0) && (num_found < 18)) assign_leader(num_found/2);
 };
 
 var assign_level_word = function(level_id) {
-    if(num_found%2 == 0) assign_leader(num_found/2);
+    if((num_found%2 == 0) && (num_found < 18)) assign_level(num_found/2);
 };
 
 var assign_badge_word = function(word) {
     w = word;
     if(noun_badges.indexOf(word)>=0) {
         img = '<img src=\'img/'
-        img=img.concat(w.concat('.svg\'width=40 height=40>';
+        img=img.concat(w.concat('.svg\'width=40 height=40>'));
         description = w.concat(' found');
         $(".badge-modal").html("<h5> You've earned a badge! </h5> <h2>" + w + "</h2> <br/>" + img + "<br/> <p>" + description + "</p>").hide().fadeIn(300).delay(800).fadeOut(1000);
         $(".incentives #badges ul").append("<li>" + img + "<h3 class = 'badge-name'>" + w + "</h3> </li>");
@@ -134,3 +134,31 @@ var assign_badge_word = function(word) {
         }
     }
 };
+
+
+// social comparison logic
+
+// var random_interval = function (range, floor) {
+//     random_number = Math.floor((Math.random()*range)+floor);
+//     return random_number;
+// };
+
+
+// if (incentive_mode == "leaders") {
+
+//     var progress = 98;
+//     var prev_percent = 1;
+
+//     $(".incentives #leaders").html("<h1> You're currently better than <strong class ='dark'>0%</strong> of other players! </h1>");
+
+//     setInterval(function() {
+
+//         var percentage = random_interval(100-progress, prev_percent);
+//         $(".incentives #leaders").html("<h1> You're currently better than <strong class ='dark'>" + percentage + "% </strong> of other players! </h1>");
+//         prog_check = (progress <= 5) ? progress = 5 : progress = progress -3;
+//         prev_percent = percentage;
+//         }, 20000);
+//     };
+
+   
+// };
