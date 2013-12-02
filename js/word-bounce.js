@@ -53,7 +53,7 @@ function draw(i){
     context.font="25px Arial";
 
     if(found.indexOf(ws[i])>=0)
-        context.fillStyle="#100000";
+        context.fillStyle="#ff0000";
     else
         context.fillStyle="#000000";
     context.fillText(ws[i],xs[i],ys[i]+10);
