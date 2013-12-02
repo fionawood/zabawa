@@ -3,6 +3,8 @@
 var xs = new Array();
 var ys = new Array();
 
+var found = new Array();
+
 var dx=[4,-4,4,4,4];
 var dy=[4,4,4,-4,4];
 
@@ -50,7 +52,10 @@ function draw(i){
 
     context.font="25px Arial";
 
-    context.fillStyle="#000000";
+    if(found.indexOf(scrambled[c])>=0)
+        context.fillStyle="#100000";
+    else
+        context.fillStyle="#000000";
     context.fillText(ws[i],xs[i],ys[i]+10);
     if( xs[i]<r+5 || xs[i]>myCanvas.width-r-5) dx[i]=-dx[i];
     if( ys[i]<r+5 || ys[i]>myCanvas.height-r-65) dy[i]=-dy[i];
@@ -79,16 +84,19 @@ var process_input = function(cmd_text) {
         var regex = new RegExp((nouns[i]), "gi");
         if (cmd_text.match(regex) !== null) {
             cmd_text="";
-            num_found++;
+            if(found.indexOf(ws[current])<0) {
+                found[num_found] = ws[current];
+                num_found++;
 
-            if (incentive_mode == "badges") {
-               assign_badge_word(nouns[i]);
-            }
-            else if (incentive_mode == "leaders") {
-                assign_leader_word(num_found);
-            }
-            else if (incentive_mode == "levels") {
-                assign_level_word(num_found);
+                if (incentive_mode == "badges") {
+                   assign_badge_word(nouns[i]);
+                }
+                else if (incentive_mode == "leaders") {
+                    assign_leader_word(num_found);
+                }
+                else if (incentive_mode == "levels") {
+                    assign_level_word(num_found);
+                }
             }
         }
     }
