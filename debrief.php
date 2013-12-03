@@ -48,7 +48,7 @@
 
         <form id="debrief-form" action="process_email.php" method="post">
         <input type="email" pattern="[^ @]*@[^ @]*" value="" name = "email">
-        <input type="text" value="" name = "comments">
+        <textarea name="comments"> We appreciate your comments! </textarea>
         <input type="submit" value="Submit"/>
         </form>
 
