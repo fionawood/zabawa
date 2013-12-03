@@ -38,29 +38,27 @@ window.onresize = resizeCanvas;
 window.onload = resizeCanvas;
 
 function draw(i){
-    var context= myCanvas.getContext('2d');
+    if(found.indexOf(ws[i])<0) {
+        var context= myCanvas.getContext('2d');
 
-    context.textAlign="center";
-    //context.clearRect(0,0,600,600);
-    context.beginPath();
-    context.strokeStyle="#000000";
-    context.fillStyle="#ffffff";
-    context.arc(xs[i],ys[i],r,0,Math.PI*2,true);
-    context.closePath();
-    context.stroke();
-    context.fill();
+        context.textAlign="center";
+        //context.clearRect(0,0,600,600);
+        context.beginPath();
+        context.strokeStyle="#000000";
+        context.fillStyle="#ffffff";
+        context.arc(xs[i],ys[i],r,0,Math.PI*2,true);
+        context.closePath();
+        context.stroke();
+        context.fill();
 
-    context.font="25px Arial";
-
-    if(found.indexOf(ws[i])>=0)
-        context.fillStyle="#ff0000";
-    else
+        context.font="25px Arial";
         context.fillStyle="#000000";
-    context.fillText(ws[i],xs[i],ys[i]+10);
-    if( xs[i]<r+5 || xs[i]>myCanvas.width-r-5) dx[i]=-dx[i];
-    if( ys[i]<r+5 || ys[i]>myCanvas.height-r-65) dy[i]=-dy[i];
-    xs[i]+=dx[i];
-    ys[i]+=dy[i];
+        context.fillText(ws[i],xs[i],ys[i]+10);
+        if( xs[i]<r+5 || xs[i]>myCanvas.width-r-5) dx[i]=-dx[i];
+        if( ys[i]<r+5 || ys[i]>myCanvas.height-r-65) dy[i]=-dy[i];
+        xs[i]+=dx[i];
+        ys[i]+=dy[i];
+    }
 }
 
 function drawAll() {
