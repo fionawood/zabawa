@@ -44,11 +44,11 @@
         <p>We are investigating <strong>how task engagement changes</strong> depending on the <span class="bright"> <em> intrinsic interest value </em></span> of the given task (for example, finding nouns versus playing a text adventure game) and the <span class="dark"><em>incentive scheme</em></span> applied to it (i.e. badges versus leveling up).</p>
 
         <form id="debrief-form" action="process_email.php" method="post">
-        <p>
+        <p> Is there anything we shoudl know about your experience?
         <textarea name="comments"> We appreciate your comments! </textarea>
         </p>
 
-        <p > If you would like to be notified of the results of this study, please enter your e-mail:
+        <p > (Optional) If you would like to be notified of the results of this study, please enter your e-mail:
         <input type="email" pattern="[^ @]*@[^ @]*" value="" name = "email">
         </p>
         <input type="submit" value="Submit"/>
