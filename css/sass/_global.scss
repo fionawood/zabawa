@@ -33,6 +33,10 @@ body {
 	overflow: hidden;
 }
 
+.next {
+	z-index: 9999999;
+}
+
 .modal {
 	position: absolute;
 	text-align: center;

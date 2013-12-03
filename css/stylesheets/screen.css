@@ -104,6 +104,11 @@ body .light {
 }
 
 /* line 36, ../sass/_global.scss */
+.next {
+  z-index: 9999999;
+}
+
+/* line 40, ../sass/_global.scss */
 .modal {
   position: absolute;
   text-align: center;
@@ -116,32 +121,32 @@ body .light {
   top: 25%;
   display: none;
 }
-/* line 47, ../sass/_global.scss */
+/* line 51, ../sass/_global.scss */
 .modal h2 {
   font-weight: 700;
   font-size: 18pt;
 }
-/* line 52, ../sass/_global.scss */
+/* line 56, ../sass/_global.scss */
 .modal h5 {
   font-weight: 300;
   font-size: 8pt;
 }
 
-/* line 58, ../sass/_global.scss */
+/* line 62, ../sass/_global.scss */
 .badge-modal {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 64, ../sass/_global.scss */
+/* line 68, ../sass/_global.scss */
 .leader-modal {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 70, ../sass/_global.scss */
+/* line 74, ../sass/_global.scss */
 .next {
   margin-top: 40px;
   display: none;
