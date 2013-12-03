@@ -68,7 +68,7 @@ var leader_percent = {
     6: "87%",
     7: "94%",
     8: "96%",
-    9: "84%",
+    9: "99%",
 };
 
 var level_name = {
