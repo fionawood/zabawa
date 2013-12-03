@@ -43,10 +43,12 @@
 
         <p>We are investigating <strong>how task engagement changes</strong> depending on the <span class="bright"> <em> intrinsic interest value </em></span> of the given task (for example, finding nouns versus playing a text adventure game) and the <span class="dark"><em>incentive scheme</em></span> applied to it (i.e. badges versus leveling up).</p>
 
+
         <p > If you would like to be notified of the results of this study, please enter your e-mail:
 
         <form id="debrief-form" action="process_email.php" method="post">
         <input type="email" pattern="[^ @]*@[^ @]*" value="" name = "email">
+        <input type="text" value="Your comments are greatly appreciated!" name = "comments">
         <input type="submit" value="Submit"/>
         </form>
 
