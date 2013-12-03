@@ -45,9 +45,7 @@
 
         <form id="debrief-form" action="process_email.php" method="post">
         <p> Is there anything we should know about your experience?</p>
-        <p>
-        <textarea name="comments" rows="10" cols="50"> We appreciate your comments! </textarea>
-        </p>
+        <p> <textarea name="comments" rows="10" cols="50"> We appreciate your comments! </textarea> </p>
 
         <p > (Optional) If you would like to be notified of the results of this study, please enter your e-mail:
         <input type="email" pattern="[^ @]*@[^ @]*" value="" name = "email">

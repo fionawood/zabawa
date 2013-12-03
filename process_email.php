@@ -6,7 +6,8 @@
 
 
     $email =  $_POST['email'];
+    $comment =  $_POST['comments'];
 
-    $result=$mysqli->query("INSERT INTO emails (email) VALUES ('$email')");
+    $result=$mysqli->query("INSERT INTO emails (email, comment) VALUES ('$email', '$comment')");
     header("Location: final.html"); 
 ?>
