@@ -384,10 +384,10 @@ var process_input = function(cmd_text) {
             if (current_stage.incentive !== undefined && incentive_mode == "badges") {
                 assign_badge(current_stage.incentive);
             }
-            else if (current_stage.incentive !== undefined && incentive_mode == "leaders") {
+            else if (current_stage.incentive !== undefined && incentive_mode == "leader") {
                 assign_leader(current_stage.incentive);
             }
-            else if (current_stage.incentive !== undefined && incentive_mode == "badges") {
+            else if (current_stage.incentive !== undefined && incentive_mode == "levels") {
                 assign_level(current_stage.incentive);
             }
 

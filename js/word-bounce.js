@@ -1,5 +1,3 @@
-
-
 var xs = new Array();
 var ys = new Array();
 
@@ -22,7 +20,6 @@ for(var i = 0; i  < ws.length; i++) {
     if(dy[i-1]>0) dy[i] = Math.random()*speed;
     else dy[i] = Math.random()*-speed;
 }
-
 
 function resizeCanvas(){
     var con = document.getElementById("console-container"),
@@ -89,7 +86,7 @@ var process_input = function(cmd_text) {
                 if (incentive_mode == "badges") {
                    assign_badge_word(nouns[i]);
                 }
-                else if (incentive_mode == "leaders") {
+                else if (incentive_mode == "leader") {
                     assign_leader_word(num_found);
                 }
                 else if (incentive_mode == "levels") {

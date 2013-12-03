@@ -80,10 +80,10 @@ var process_input = function(cmd_text) {
         if (incentive_mode == "badges") {
             assign_badge_word(ws[current]);
         }
-        else if (incentive_mode == "leaders") {
+        else if (incentive_mode == "leader") {
             assign_leader_word(num_found);
         }
-        else if (incentive_mode == "badges") {
+        else if (incentive_mode == "levels") {
             assign_level_word(num_found);
         }
         ws.splice(current,1);
