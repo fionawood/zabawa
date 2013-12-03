@@ -228,11 +228,11 @@ var stages = {
     create: {
         action: "There are many materials here that you can use to generate clones, and you soon have a large contingent of creatures like yourself to lead. The man's brain controls everything he does...maybe you can get inside through the optic nerve.",
         commands: ["optic", "nerve", "inside"],
-        defaults: "If you can just follow the optic nerve inside the cerbellum you can begin replicating inside..." },  
+        defaults: "If you can just follow the optic nerve inside the cerebellum you can begin replicating inside..." },  
     more: {
         action: "There are many materials here that you can use to generate clones, and you soon have a large contingent of creatures like yourself to lead. The man's brain controls everything he does...maybe you can get inside through the optic nerve.",
         commands: ["optic", "nerve", "inside"],
-        defaults: "If you can just follow the optic nerve inside the cerbellum you can begin replicating inside..." },  
+        defaults: "If you can just follow the optic nerve inside the cerebellum you can begin replicating inside..." },  
     eye: {
         action: "You make the perilious journey across the man's optic nerve. Immune activity around the eye is particularly strong and many of your fellow creatures are obliterated, but you and several others succesfully lodge in the man's brain. You can travel into the depths of the cortex now...but maybe it would be best to replenish your forces first.",
         commands: ["cortex", "replenish", "force"],
