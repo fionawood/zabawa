@@ -17,7 +17,7 @@
 	shuffle($game_sequence);
 
 	$incentive_sequence = array('badges','levels','leader');
-	if(rand()/getrandmax() < .2) $incentive_sequence = array('none','none','none');
+	if(rand()/getrandmax() < .1) $incentive_sequence = array('none','none','none');
 	else shuffle($incentive_sequence);
 
 	$_SESSION['game_sequence'] = $game_sequence;
