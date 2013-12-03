@@ -57,7 +57,7 @@ function draw(c){
 function drawAll() {
     var context= myCanvas.getContext('2d');
     context.clearRect(0,0,myCanvas.width,myCanvas.height);
-    if(current>words.length-1) current=0;
+    if(current>scrambled.length-1) current=0;
     draw(current);
 }
 
