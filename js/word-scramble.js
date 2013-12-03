@@ -44,8 +44,8 @@ function draw(c){
     context.font="30px Arial";
 
     context.fillStyle="#000000";
-    if(scrambled.length<=0) 
-        context.fillText("You finished!");
+    if(scrambled.length<1) 
+        context.fillText("You finished!",x,y+10);
     else
         context.fillText(scrambled[c],x,y+10);
     if( x<r+5 || x>myCanvas.width-r-5) dx=-dx;
