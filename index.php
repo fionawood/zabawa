@@ -56,12 +56,13 @@
         </p>
         </div>
 
+        <p id = "start-button" class = "very-large-text centered"> <a href="#" id="firstGame"> Let the games begin! &#9654; </a> </p>
+
         <div class = "consent-box">
             <div class ="tag"> I agree and wish to participate. </div>
             <input type ="checkbox" value = "consent" id="consent-box" class="regular-checkbox big-checkbox"> <label for="consent-box"></label>
         </div>
 
-        <p id = "start-button" class = "very-large-text centered"> <a href="#" id="firstGame"> Let the games begin! &#9654; </a> </p>
         </section>
 
 

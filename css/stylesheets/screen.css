@@ -101,14 +101,15 @@ body .light {
 /* line 32, ../sass/_global.scss */
 .incentives {
   overflow: hidden;
+  min-height: 20px;
 }
 
-/* line 36, ../sass/_global.scss */
+/* line 37, ../sass/_global.scss */
 .next {
   z-index: 9999999;
 }
 
-/* line 40, ../sass/_global.scss */
+/* line 41, ../sass/_global.scss */
 .modal {
   position: absolute;
   text-align: center;
@@ -121,32 +122,32 @@ body .light {
   top: 25%;
   display: none;
 }
-/* line 51, ../sass/_global.scss */
+/* line 52, ../sass/_global.scss */
 .modal h2 {
   font-weight: 700;
   font-size: 18pt;
 }
-/* line 56, ../sass/_global.scss */
+/* line 57, ../sass/_global.scss */
 .modal h5 {
   font-weight: 300;
   font-size: 8pt;
 }
 
-/* line 62, ../sass/_global.scss */
+/* line 63, ../sass/_global.scss */
 .badge-modal {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 68, ../sass/_global.scss */
+/* line 69, ../sass/_global.scss */
 .leader-modal {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 74, ../sass/_global.scss */
+/* line 75, ../sass/_global.scss */
 .next {
   margin-top: 40px;
   display: none;
