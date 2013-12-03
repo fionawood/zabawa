@@ -11,7 +11,7 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Punisher: A Set of Games</title>
+        <title>Survey</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />

@@ -11,7 +11,7 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NLP Online Input Character Evaluation: Survey</title>
+        <title>Text Adventure</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
