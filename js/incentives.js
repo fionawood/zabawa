@@ -6,7 +6,7 @@ var nouns=["sneeze","bug","ant","hill","box","brain","human","climb","pinhole","
 var noun_badges = ["bug","ant","box","brain","grass","guts","four","five","seven"];
 // badge logic
 
-var largest_word=0;
+var progress=0;
 
 var adventure_badges = {
     1: {
@@ -87,27 +87,29 @@ var assign_badge = function(badge_id) {
 };
 
 var assign_leader = function(leader_id) {
-    console.log("WTF");
     percentage = leader_percent[leader_id];
     $(".leader-modal").html("<p> You're currently farther in the game than<br/><strong class ='dark large-text'>" + percentage + "</strong><br/>of other players! </p>").hide().fadeIn(300).delay(800).fadeOut(1000);
     $(".incentives #leaders").html("<h1> You're currently farther in the game than <strong class ='dark'>" + percentage + " </strong> of other players! </h1>");
 };
 
 var assign_level = function(level_id) {
-    console.log("WTF");
     lname = level_name[level_id];
     $(".level-modal").html("<p> You've achieved the <br/><strong class ='dark large-text'>" + lname + "</strong><br/> level! </p>").hide().fadeIn(300).delay(800).fadeOut(1000);
     $(".incentives #levels").html("<h1> You've achieved the <strong class ='dark'>" + lname + " </strong> level! </h1>");
 };
 
 var assign_leader_word = function(num_found) {
-    if((num_found%2 == 0) && (num_found < 20)) assign_leader(num_found/2);
-    console.log("WTF");
+    if((progress <9) && (Math.random()<.3)) {
+        progress++;
+        assign_leader(progress);
+    } 
 };
 
 var assign_level_word = function(level_id) {
-    if((num_found%2 == 0) && (num_found < 20)) assign_level(num_found/2);
-    console.log("WTF");
+    if((progress <9) && (Math.random()<.3)) {
+        progress++;
+        assign_level(progress);
+    } 
 };
 
 var assign_badge_word = function(word) {
