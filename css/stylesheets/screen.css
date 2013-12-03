@@ -76,7 +76,6 @@ body {
   font-size: 12pt;
   margin: 0px auto;
   color: #505657;
-  overflow: hidden;
 }
 /* line 10, ../sass/_global.scss */
 body a {
@@ -100,6 +99,11 @@ body .light {
 }
 
 /* line 32, ../sass/_global.scss */
+.incentives {
+  overflow: hidden;
+}
+
+/* line 36, ../sass/_global.scss */
 .modal {
   position: absolute;
   text-align: center;
@@ -112,32 +116,32 @@ body .light {
   top: 25%;
   display: none;
 }
-/* line 43, ../sass/_global.scss */
+/* line 47, ../sass/_global.scss */
 .modal h2 {
   font-weight: 700;
   font-size: 18pt;
 }
-/* line 48, ../sass/_global.scss */
+/* line 52, ../sass/_global.scss */
 .modal h5 {
   font-weight: 300;
   font-size: 8pt;
 }
 
-/* line 54, ../sass/_global.scss */
+/* line 58, ../sass/_global.scss */
 .badge-modal {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 60, ../sass/_global.scss */
+/* line 64, ../sass/_global.scss */
 .leader-modal {
   width: 200px;
   left: 50%;
   margin-left: -100px;
 }
 
-/* line 66, ../sass/_global.scss */
+/* line 70, ../sass/_global.scss */
 .next {
   margin-top: 40px;
   display: none;
