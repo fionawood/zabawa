@@ -1,8 +1,8 @@
 var start;
 var elapsed;
 
-// $(".next").hide().delay(18000).fadeIn(8000, function() { SHORTER DELAY FOR DEBUGGING
-$('.next').hide().delay(180).fadeIn(8000, function() {
+$(".next").hide().delay(18000).fadeIn(8000, function() { 
+//$('.next').hide().delay(180).fadeIn(8000, function() {
     start = new Date();
 });
 
