@@ -99,14 +99,14 @@ var assign_level = function(level_id) {
 };
 
 var assign_leader_word = function(num_found) {
-    if((progress <9) && (Math.random()<.3)) {
+    if((progress <9) && (Math.random()<.4)) {
         progress++;
         assign_leader(progress);
     } 
 };
 
 var assign_level_word = function(level_id) {
-    if((progress <9) && (Math.random()<.3)) {
+    if((progress <9) && (Math.random()<.4)) {
         progress++;
         assign_level(progress);
     } 
