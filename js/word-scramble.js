@@ -81,10 +81,10 @@ var process_input = function(cmd_text) {
             assign_badge_word(ws[current]);
         }
         else if (incentive_mode == "leaders") {
-            assign_leader_word(ws[current]);
+            assign_leader_word(num_found);
         }
         else if (incentive_mode == "badges") {
-            assign_level_word(ws[current]);
+            assign_level_word(num_found);
         }
         ws.splice(current,1);
         scrambled.splice(current,1);
