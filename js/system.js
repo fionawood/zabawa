@@ -32,7 +32,12 @@ $('#nextbtn').click(function(){
 $(function() {
 if (incentive_mode !== "none") {
 	$("#incentive-container").show();
-    $("#incentive-questions").html("How much did you like the presence of <strong>" + incentive_mode + "</strong> in the game?");
+  incentive_str = incentive_mode;
+  if(incentive_str=="leader") {
+    incentive_str="social comparison";
+  }
+    $("#incentive-questions").html("How much did you like the presence of <strong>" + incentive_str + "</strong> in the game?");
+  }
 }
 
 $('input[type=radio]').change(function(){
