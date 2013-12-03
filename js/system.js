@@ -32,7 +32,7 @@ $('#nextbtn').click(function(){
 $(function() {
 if (incentive_mode !== "none") {
 	$("#incentive-container").show();
-  incentive_str = incentive_mode;
+  var incentive_str = incentive_mode;
   if(incentive_str=="leader") {
     incentive_str="social comparison";
   }
