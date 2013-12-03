@@ -73,14 +73,14 @@ var leader_percent = {
 
 var level_name = {
     1: "Escapee",
-    2: "Explorer",
-    3: "Invader",
-    4: "World Domination",
-    5: "Global Superpower",
-    6: "Dictator of the Solar System",
-    7: "Galactic Despot",
-    8: "King of the Universe",
-    9: "Emperor of Everything",
+    2: "Forager",
+    3: "Explorer",
+    4: "Parasite",
+    5: "Invader",
+    6: "Replicant",
+    7: "Infection",
+    8: "Plague",
+    9: "Domination",
 };
 
 var assign_badge = function(badge_id) {
