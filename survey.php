@@ -91,7 +91,7 @@
                 <input type="radio" id="incentive-1" value="1" name="incentive"/><label for="incentive-1">not at all</label>
                 <input type="radio" id="incentive-2" value="2" name="incentive"/><label for="incentive-2">not much</label>
                 <input type="radio" id="incentive-3" value="3" name="incentive"/><label for="incentive-3">somewhat</label>
-                <input type="radio" id="incentive-4" value="4" name="incentive"/><label for="incentive-4">a bit</label>
+                <input type="radio" id="incentive-4" value="4" name="incentive"/><label for="incentive-4">quite a bit</label>
                 <input type="radio" id="incentive-5" value="5" name="incentive"/><label for="incentive-5">liked it a lot</label></p>
             </div>
             <input type="submit" value="Proceed to the next game!">
