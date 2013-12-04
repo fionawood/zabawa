@@ -2,7 +2,7 @@
 //incentive_mode = "badges";
 
 var words=["sneeze","bug","ant","violent","virulent","generate","hill","journey","box","outside","replicate","perilous","brain","leg","man","sky","immune","create","consume","glance","eat","optic","human","threat","climb","pinhole","grass","guts","hunger","rat","infect","twitch"];
-var nouns=["sneeze","bug","ant","hill","journey","box","brain","human","threat","climb","pinhole","grass","guts","rat","leg","man","sky","outside","hunger","twitch"];
+var nouns=["sneeze","bug","ant","hill","journey","box","brain","human","threat","climb","pinhole","grass","guts","rat","leg","man","sky","outside","hunger","twitch","optic"];
 var noun_badges = ["bug","ant","box","brain","grass","guts","four","five","seven"];
 // badge logic
 
