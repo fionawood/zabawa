@@ -50,7 +50,7 @@ function draw(i){
 
         context.font="25px Arial";
         context.fillStyle="#000000";
-        if(num_found<ws.length) {
+        if(num_found<nouns.length) {
             context.fillText(ws[i],xs[i],ys[i]+10);
         } else {
             context.fillText("Done!",xs[i],ys[i]+10);
