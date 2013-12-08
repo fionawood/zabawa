@@ -91,9 +91,7 @@ var process_input = function(cmd_text) {
         scrambled.splice(current,1);
 
     } else {
-        console.log(scrambled[current]);
         scrambled[current] = scrambled[current].split('').sort(function(){return 0.5-Math.random()}).join('');
-        console.log(scrambled[current]);
         if(current<ws.length-1) current++;
         else current=0;
     }
