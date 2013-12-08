@@ -50,7 +50,11 @@ function draw(i){
 
         context.font="25px Arial";
         context.fillStyle="#000000";
-        context.fillText(ws[i],xs[i],ys[i]+10);
+        if(num_found<scrambled.length) {
+            context.fillText(ws[i],xs[i],ys[i]+10);
+        } else {
+            context.fillText("Done!",xs[i],ys[i]+10);
+        }
         if( xs[i]<r+5 || xs[i]>myCanvas.width-r-5) dx[i]=-dx[i];
         if( ys[i]<r+5 || ys[i]>myCanvas.height-r-65) dy[i]=-dy[i];
         xs[i]+=dx[i];
